@@ -1,0 +1,609 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4CD740B72ABB355C004DD661 /* TingleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740B62ABB355C004DD661 /* TingleApp.swift */; };
+		4CD740B92ABB355C004DD661 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740B82ABB355C004DD661 /* ContentView.swift */; };
+		4CD740BB2ABB355F004DD661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD740BA2ABB355F004DD661 /* Assets.xcassets */; };
+		4CD740BE2ABB355F004DD661 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD740BD2ABB355F004DD661 /* Preview Assets.xcassets */; };
+		4CD740C02ABB355F004DD661 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740BF2ABB355F004DD661 /* Persistence.swift */; };
+		4CD740C32ABB355F004DD661 /* Tingle.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740C12ABB355F004DD661 /* Tingle.xcdatamodeld */; };
+		4CD740CD2ABB355F004DD661 /* TingleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740CC2ABB355F004DD661 /* TingleTests.swift */; };
+		4CD740D72ABB355F004DD661 /* TingleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740D62ABB355F004DD661 /* TingleUITests.swift */; };
+		4CD740D92ABB355F004DD661 /* TingleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740D82ABB355F004DD661 /* TingleUITestsLaunchTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4CD740C92ABB355F004DD661 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CD740AB2ABB355C004DD661 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CD740B22ABB355C004DD661;
+			remoteInfo = Tingle;
+		};
+		4CD740D32ABB355F004DD661 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4CD740AB2ABB355C004DD661 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4CD740B22ABB355C004DD661;
+			remoteInfo = Tingle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4CD740B32ABB355C004DD661 /* Tingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD740B62ABB355C004DD661 /* TingleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TingleApp.swift; sourceTree = "<group>"; };
+		4CD740B82ABB355C004DD661 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4CD740BA2ABB355F004DD661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4CD740BD2ABB355F004DD661 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		4CD740BF2ABB355F004DD661 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
+		4CD740C22ABB355F004DD661 /* Tingle.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Tingle.xcdatamodel; sourceTree = "<group>"; };
+		4CD740C82ABB355F004DD661 /* TingleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TingleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD740CC2ABB355F004DD661 /* TingleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TingleTests.swift; sourceTree = "<group>"; };
+		4CD740D22ABB355F004DD661 /* TingleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TingleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4CD740D62ABB355F004DD661 /* TingleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TingleUITests.swift; sourceTree = "<group>"; };
+		4CD740D82ABB355F004DD661 /* TingleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TingleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4CD740B02ABB355C004DD661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD740C52ABB355F004DD661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD740CF2ABB355F004DD661 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4CD740AA2ABB355C004DD661 = {
+			isa = PBXGroup;
+			children = (
+				4CD740B52ABB355C004DD661 /* Tingle */,
+				4CD740CB2ABB355F004DD661 /* TingleTests */,
+				4CD740D52ABB355F004DD661 /* TingleUITests */,
+				4CD740B42ABB355C004DD661 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4CD740B42ABB355C004DD661 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740B32ABB355C004DD661 /* Tingle.app */,
+				4CD740C82ABB355F004DD661 /* TingleTests.xctest */,
+				4CD740D22ABB355F004DD661 /* TingleUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4CD740B52ABB355C004DD661 /* Tingle */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740B62ABB355C004DD661 /* TingleApp.swift */,
+				4CD740B82ABB355C004DD661 /* ContentView.swift */,
+				4CD740BA2ABB355F004DD661 /* Assets.xcassets */,
+				4CD740BF2ABB355F004DD661 /* Persistence.swift */,
+				4CD740C12ABB355F004DD661 /* Tingle.xcdatamodeld */,
+				4CD740BC2ABB355F004DD661 /* Preview Content */,
+			);
+			path = Tingle;
+			sourceTree = "<group>";
+		};
+		4CD740BC2ABB355F004DD661 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740BD2ABB355F004DD661 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		4CD740CB2ABB355F004DD661 /* TingleTests */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740CC2ABB355F004DD661 /* TingleTests.swift */,
+			);
+			path = TingleTests;
+			sourceTree = "<group>";
+		};
+		4CD740D52ABB355F004DD661 /* TingleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740D62ABB355F004DD661 /* TingleUITests.swift */,
+				4CD740D82ABB355F004DD661 /* TingleUITestsLaunchTests.swift */,
+			);
+			path = TingleUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4CD740B22ABB355C004DD661 /* Tingle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CD740DC2ABB355F004DD661 /* Build configuration list for PBXNativeTarget "Tingle" */;
+			buildPhases = (
+				4CD740AF2ABB355C004DD661 /* Sources */,
+				4CD740B02ABB355C004DD661 /* Frameworks */,
+				4CD740B12ABB355C004DD661 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Tingle;
+			productName = Tingle;
+			productReference = 4CD740B32ABB355C004DD661 /* Tingle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4CD740C72ABB355F004DD661 /* TingleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CD740DF2ABB355F004DD661 /* Build configuration list for PBXNativeTarget "TingleTests" */;
+			buildPhases = (
+				4CD740C42ABB355F004DD661 /* Sources */,
+				4CD740C52ABB355F004DD661 /* Frameworks */,
+				4CD740C62ABB355F004DD661 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CD740CA2ABB355F004DD661 /* PBXTargetDependency */,
+			);
+			name = TingleTests;
+			productName = TingleTests;
+			productReference = 4CD740C82ABB355F004DD661 /* TingleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4CD740D12ABB355F004DD661 /* TingleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4CD740E22ABB355F004DD661 /* Build configuration list for PBXNativeTarget "TingleUITests" */;
+			buildPhases = (
+				4CD740CE2ABB355F004DD661 /* Sources */,
+				4CD740CF2ABB355F004DD661 /* Frameworks */,
+				4CD740D02ABB355F004DD661 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4CD740D42ABB355F004DD661 /* PBXTargetDependency */,
+			);
+			name = TingleUITests;
+			productName = TingleUITests;
+			productReference = 4CD740D22ABB355F004DD661 /* TingleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4CD740AB2ABB355C004DD661 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					4CD740B22ABB355C004DD661 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					4CD740C72ABB355F004DD661 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 4CD740B22ABB355C004DD661;
+					};
+					4CD740D12ABB355F004DD661 = {
+						CreatedOnToolsVersion = 14.3;
+						TestTargetID = 4CD740B22ABB355C004DD661;
+					};
+				};
+			};
+			buildConfigurationList = 4CD740AE2ABB355C004DD661 /* Build configuration list for PBXProject "Tingle" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4CD740AA2ABB355C004DD661;
+			productRefGroup = 4CD740B42ABB355C004DD661 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4CD740B22ABB355C004DD661 /* Tingle */,
+				4CD740C72ABB355F004DD661 /* TingleTests */,
+				4CD740D12ABB355F004DD661 /* TingleUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4CD740B12ABB355C004DD661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD740BE2ABB355F004DD661 /* Preview Assets.xcassets in Resources */,
+				4CD740BB2ABB355F004DD661 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD740C62ABB355F004DD661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD740D02ABB355F004DD661 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4CD740AF2ABB355C004DD661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD740C02ABB355F004DD661 /* Persistence.swift in Sources */,
+				4CD740B92ABB355C004DD661 /* ContentView.swift in Sources */,
+				4CD740C32ABB355F004DD661 /* Tingle.xcdatamodeld in Sources */,
+				4CD740B72ABB355C004DD661 /* TingleApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD740C42ABB355F004DD661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD740CD2ABB355F004DD661 /* TingleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4CD740CE2ABB355F004DD661 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4CD740D72ABB355F004DD661 /* TingleUITests.swift in Sources */,
+				4CD740D92ABB355F004DD661 /* TingleUITestsLaunchTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4CD740CA2ABB355F004DD661 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CD740B22ABB355C004DD661 /* Tingle */;
+			targetProxy = 4CD740C92ABB355F004DD661 /* PBXContainerItemProxy */;
+		};
+		4CD740D42ABB355F004DD661 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4CD740B22ABB355C004DD661 /* Tingle */;
+			targetProxy = 4CD740D32ABB355F004DD661 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		4CD740DA2ABB355F004DD661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		4CD740DB2ABB355F004DD661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4CD740DD2ABB355F004DD661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Tingle/Preview Content\"";
+				DEVELOPMENT_TEAM = 2JM7W65QBL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Extensions.Tingle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4CD740DE2ABB355F004DD661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "\"Tingle/Preview Content\"";
+				DEVELOPMENT_TEAM = 2JM7W65QBL;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Extensions.Tingle;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4CD740E02ABB355F004DD661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JM7W65QBL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Extensions.TingleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tingle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tingle";
+			};
+			name = Debug;
+		};
+		4CD740E12ABB355F004DD661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JM7W65QBL;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Extensions.TingleTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Tingle.app/$(BUNDLE_EXECUTABLE_FOLDER_PATH)/Tingle";
+			};
+			name = Release;
+		};
+		4CD740E32ABB355F004DD661 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JM7W65QBL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Extensions.TingleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tingle;
+			};
+			name = Debug;
+		};
+		4CD740E42ABB355F004DD661 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 2JM7W65QBL;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = Extensions.TingleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Tingle;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4CD740AE2ABB355C004DD661 /* Build configuration list for PBXProject "Tingle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD740DA2ABB355F004DD661 /* Debug */,
+				4CD740DB2ABB355F004DD661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CD740DC2ABB355F004DD661 /* Build configuration list for PBXNativeTarget "Tingle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD740DD2ABB355F004DD661 /* Debug */,
+				4CD740DE2ABB355F004DD661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CD740DF2ABB355F004DD661 /* Build configuration list for PBXNativeTarget "TingleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD740E02ABB355F004DD661 /* Debug */,
+				4CD740E12ABB355F004DD661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4CD740E22ABB355F004DD661 /* Build configuration list for PBXNativeTarget "TingleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4CD740E32ABB355F004DD661 /* Debug */,
+				4CD740E42ABB355F004DD661 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		4CD740C12ABB355F004DD661 /* Tingle.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				4CD740C22ABB355F004DD661 /* Tingle.xcdatamodel */,
+			);
+			currentVersion = 4CD740C22ABB355F004DD661 /* Tingle.xcdatamodel */;
+			path = Tingle.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 4CD740AB2ABB355C004DD661 /* Project object */;
+}
