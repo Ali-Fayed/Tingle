@@ -10,26 +10,40 @@ import Combine
 import CoreData
 
 class AuthenticationViewModel: ObservableObject {
-    private var subscriptions = Set< AnyCancellable > ()
-    @Published var isAuthenticated: Bool = false
+    // MARK: - Propeties
+    private var subscriptionsBag = Set< AnyCancellable>()
+    private var networkManger = NetworkingManger.shared
     @Published var authModel: AuthModel?
+    @Published var isAuthenticated = false
+    @Published var isPasswordVisible = false
+    @Published var isLoading = false
+    @Published var isAlertShown = false
+    @Published var alertMessage = ""
+    @Published var username = ""
+    @Published var password = ""
+    // MARK: - Methods
     func authenticateUser(userName: String, password: String, context: NSManagedObjectContext, cachedModel: [AuthSavedModel]) {
-        let request = NetworkingManger.shared.performRequest(router: RequestRouter.authentication(userName: userName, password: password), model: AuthModel.self, shouldCache: false)
+        let model = AuthModel.self
+        let routert = RequestRouter.authentication(userName: userName, password: password)
+        let request = networkManger.performRequest(router: routert, model: model, shouldCache: false)
+        self.isLoading = true
         request.sink { completion in
             switch completion {
-            case .failure(let error):
-                print("Error: \(error)")
-                self.isAuthenticated = true
             case .finished:
                 self.isAuthenticated = true
+                self.isLoading = false
+            case .failure(_):
+                self.isAuthenticated = true
+                self.isAlertShown = true
+                self.alertMessage = AuthViewConstants.errorMessage
+                self.isLoading = false
             }
         } receiveValue: { authModel in
             DispatchQueue.main.async {
                 self.authModel = authModel
                 self.cacheAuthenticatedUserData(authResponse: authModel, context: context, cachedModels: cachedModel)
-                print(authModel.email)
             }
-        }.store(in: &subscriptions)
+        }.store(in: &subscriptionsBag)
     }
     private func cacheAuthenticatedUserData(authResponse: AuthModel, context: NSManagedObjectContext, cachedModels: [AuthSavedModel]) {
         let duplicate = cachedModels.first { $0.userName == authResponse.username }
@@ -43,7 +57,6 @@ class AuthenticationViewModel: ObservableObject {
             newItem.image = authResponse.image
             newItem.gender = authResponse.gender
             newItem.userName = authResponse.username
-            
             do {
                 try context.save()
             } catch {

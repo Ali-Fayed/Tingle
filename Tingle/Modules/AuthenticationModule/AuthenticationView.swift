@@ -8,94 +8,47 @@ import SwiftUI
 import CoreData
 
 struct AuthenticationView: View {
-    @StateObject private var viewModel = AuthenticationViewModel()
-    @State private var username: String = ""
-    @State private var password: String = ""
-    @State private var isPasswordVisible: Bool = false
-    @Environment(\.managedObjectContext) private var context
+    // MARK: - Propeties
+    @StateObject var viewModel = AuthenticationViewModel()
+    // MARK: - CoreData
+    @Environment(\.managedObjectContext) var context
     @FetchRequest(
             entity: AuthSavedModel.entity(),
             sortDescriptors: [],
             predicate: nil
         ) var authCachedModel: FetchedResults<AuthSavedModel>
-
+    // MARK: - View Body
     var body: some View {
         NavigationView {
-            VStack {
-                Image("TopImage")
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: 400, height: 200)
-                    .padding(.top, 120)
+            VStack(spacing: 10) {
+                renderTopImage()
                 Spacer()
-                
-                
-                VStack(spacing: 20) {
-                    Text("Welcome")
-                        .padding(.top, 20)
-                        .foregroundColor(Color(hex: "#3F3FD1"))
-                        .font(Font.system(size: 25, weight: .bold))
-                        .padding(.bottom, -5)
-                    
-                    
-                    TextField("Enter your user name", text: $username)
-                        .padding()
-                        .background(Color(.white))
-                        .overlay(
-                            RoundedRectangle(cornerRadius: 10)
-                                .stroke(Color.gray, lineWidth: 0.5)
-                        )
-                    
-                    HStack {
-                        if isPasswordVisible {
-                            TextField("Enter your password", text: $password)
-                        } else {
-                            SecureField("Enter your password", text: $password)
-                        }
-                        
-                        Button(action: {
-                            isPasswordVisible.toggle()
-                        }) {
-                            Image(systemName: isPasswordVisible ? "eye.slash.fill" : "eye.fill")
-                                .padding(.trailing, 10)
-                                .foregroundColor(.gray)
-                        }
+                VStack(spacing: 10) {
+                    renderWelcomeTitle()
+                    renderUserNameTextField()
+                    renderPasswordTextFields()
+                    renderSignInButton()
+                }
+            }.alert(isPresented: $viewModel.isAlertShown) {
+                Alert(title: Text(AuthViewConstants.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text(AuthViewConstants.oKTitle)))
+            }.padding()
+            //
+            NavigationLink("", destination: PostsListView(), isActive: $viewModel.isAuthenticated).hidden()
+            //
+            }.disabled(viewModel.isLoading)
+            .blur(radius: viewModel.isLoading ? 10.0 : 0.0)
+            .overlay(
+                Group {
+                    if viewModel.isLoading{
+                        ProgressView("Loading...").tint(.white).foregroundColor(.white)
                     }
-                    .padding()
-                    .background(Color(.white))
-                    .overlay(
-                        RoundedRectangle(cornerRadius: 10)
-                            .stroke(Color.gray, lineWidth: 0.5)
-                    )
                 }
-                
-                Button(action: {
-                    let cachedModelsArray = Array(authCachedModel)
-                    viewModel.authenticateUser(userName: username, password: password, context: context, cachedModel: cachedModelsArray)
-                }) {
-                    Text("Sign In")
-                        .font(.headline)
-                        .foregroundColor(.white)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color(hex: "#3F3FD1"))
-                        .cornerRadius(30)
-                }
-                .padding(.top, 20)
-                NavigationLink("", destination: PostsListView(), isActive: $viewModel.isAuthenticated)
-                    .hidden()
-            }.onAppear{
-                print(authCachedModel.count)
-            }.edgesIgnoringSafeArea(.top)
-            
-                .padding()
+            )
         }
     }
-}
-
+    // MARK: - Preview
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         AuthenticationView()
     }
 }
-
