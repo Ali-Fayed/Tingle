@@ -11,14 +11,12 @@ struct PostsListView: View {
     @StateObject private var viewModel = PostsListViewModel()
     
     var body: some View {
-        NavigationView {
             Text("")
             .onAppear {
                 viewModel.fetchPosts()
                 viewModel.searchPostsSearch(seachKeyWord: "food")
             }
             .navigationBarTitle("Posts")
-        }
     }
 }
 

@@ -10,6 +10,7 @@ import Combine
 
 class AuthenticationViewModel: ObservableObject {
     private var subscriptions = Set< AnyCancellable > ()
+    @Published var isAuthenticated: Bool = false
     @Published var authModel: AuthModel?
     func authenticateUser(userName: String, password: String) {
         let request = NetworkingManger.shared.performRequest(router: RequestRouter.authentication(userName: userName, password: password), model: AuthModel.self, shouldCache: false)
@@ -18,7 +19,7 @@ class AuthenticationViewModel: ObservableObject {
             case .failure(let error):
                 print("Error: \(error)")
             case .finished:
-                break
+                self.isAuthenticated = true
             }
         } receiveValue: { authModel in
             DispatchQueue.main.async {

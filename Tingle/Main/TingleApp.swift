@@ -11,7 +11,7 @@ import SwiftUI
 struct TingleApp: App {
     var body: some Scene {
         WindowGroup {
-            PostsListView()
+            AuthenticationView()
         }
     }
 }

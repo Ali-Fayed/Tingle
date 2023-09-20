@@ -30,6 +30,7 @@
 		4CD741022ABB4161004DD661 /* BaseRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741012ABB4161004DD661 /* BaseRouterProtocol.swift */; };
 		4CD7410A2ABB44D1004DD661 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741092ABB44D1004DD661 /* AuthenticationView.swift */; };
 		4CD7410C2ABB44DD004DD661 /* AuthenticationViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7410B2ABB44DD004DD661 /* AuthenticationViewModel .swift */; };
+		4CD7410E2ABB4FF4004DD661 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7410D2ABB4FF4004DD661 /* Color+Ext.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -76,6 +77,7 @@
 		4CD741012ABB4161004DD661 /* BaseRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouterProtocol.swift; sourceTree = "<group>"; };
 		4CD741092ABB44D1004DD661 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		4CD7410B2ABB44DD004DD661 /* AuthenticationViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationViewModel .swift"; sourceTree = "<group>"; };
+		4CD7410D2ABB4FF4004DD661 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -165,6 +167,7 @@
 			children = (
 				4CD740E62ABB35E4004DD661 /* NetworkingLayer */,
 				4CD740FB2ABB3C53004DD661 /* Models */,
+				4CD7410F2ABB4FFE004DD661 /* Extension */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -261,6 +264,14 @@
 				4CD7410B2ABB44DD004DD661 /* AuthenticationViewModel .swift */,
 			);
 			path = AuthenticationModule;
+			sourceTree = "<group>";
+		};
+		4CD7410F2ABB4FFE004DD661 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				4CD7410D2ABB4FF4004DD661 /* Color+Ext.swift */,
+			);
+			path = Extension;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -410,6 +421,7 @@
 				4CD7410A2ABB44D1004DD661 /* AuthenticationView.swift in Sources */,
 				4CD740FA2ABB381C004DD661 /* PostsListViewModel.swift in Sources */,
 				4CD740F42ABB35E4004DD661 /* NetworkReachability.swift in Sources */,
+				4CD7410E2ABB4FF4004DD661 /* Color+Ext.swift in Sources */,
 				4CD740F52ABB35E4004DD661 /* RequestRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -577,6 +589,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -606,6 +619,7 @@
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
