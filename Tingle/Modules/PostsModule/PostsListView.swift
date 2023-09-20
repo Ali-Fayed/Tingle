@@ -13,11 +13,11 @@ struct PostsListView: View {
     @State private var isSearching = false
 
     var body: some View {
+        NavigationView {
             List(viewModel.posts) { post in
                 PostCustomView(post: post, imageURL: "Profile")
                 }.listStyle(.plain)
-            .navigationBarBackButtonHidden(true)
-            .toolbar {
+                .toolbar {
         
                 ToolbarItem(placement: .navigationBarTrailing) {
                     if isSearching {
@@ -50,6 +50,7 @@ struct PostsListView: View {
             .onAppear {
                 viewModel.fetchPosts()
             }
+        }
     }
 }
 

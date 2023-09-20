@@ -63,8 +63,6 @@ class AuthenticationViewModel: ObservableObject {
                 let nsError = error as NSError
                 fatalError("Unresolved error \(nsError), \(nsError.userInfo)")
             }
-        } else {
-            print("Duplicate item found")
         }
     }
 }

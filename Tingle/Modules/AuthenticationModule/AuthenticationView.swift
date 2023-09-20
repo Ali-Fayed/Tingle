@@ -8,45 +8,49 @@ import SwiftUI
 import CoreData
 
 struct AuthenticationView: View {
-    // MARK: - Propeties
+    // MARK: - Properties
     @StateObject var viewModel = AuthenticationViewModel()
+    @State private var isSheetPresented = false // Flag to control the sheet presentation
+
     // MARK: - CoreData
     @Environment(\.managedObjectContext) var context
     @FetchRequest(
-            entity: AuthSavedModel.entity(),
-            sortDescriptors: [],
-            predicate: nil
-        ) var authCachedModel: FetchedResults<AuthSavedModel>
+        entity: AuthSavedModel.entity(),
+        sortDescriptors: [],
+        predicate: nil
+    ) var authCachedModel: FetchedResults<AuthSavedModel>
+
     // MARK: - View Body
     var body: some View {
-        NavigationView {
+        VStack(spacing: 10) {
+            renderTopImage()
+            Spacer()
             VStack(spacing: 10) {
-                renderTopImage()
-                Spacer()
-                VStack(spacing: 10) {
-                    renderWelcomeTitle()
-                    renderUserNameTextField()
-                    renderPasswordTextFields()
-                    renderSignInButton()
-                }
-            }.alert(isPresented: $viewModel.isAlertShown) {
-                Alert(title: Text(AuthViewConstants.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text(AuthViewConstants.oKTitle)))
-            }.padding()
-            //
-            NavigationLink("", destination: PostsListView(), isActive: $viewModel.isAuthenticated).hidden()
-            //
-            }.disabled(viewModel.isLoading)
-            .blur(radius: viewModel.isLoading ? 10.0 : 0.0)
-            .overlay(
-                Group {
-                    if viewModel.isLoading{
-                        ProgressView("Loading...").tint(.white).foregroundColor(.white)
-                    }
-                }
-            )
+                renderWelcomeTitle()
+                renderUserNameTextField()
+                renderPasswordTextFields()
+                renderSignInButton()
+            }
         }
+        .padding()
+        .alert(isPresented: $viewModel.isAlertShown) {
+            Alert(title: Text(AuthViewConstants.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text(AuthViewConstants.oKTitle)))
+        }.fullScreenCover(isPresented: $viewModel.isAuthenticated) {
+          PostsListView()
+        }.blur(radius: viewModel.isLoading ? 10.0 : 0.0)
+        .overlay(
+            Group {
+                if viewModel.isLoading {
+                    ProgressView("Loading...")
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white)) // Change the tint color here
+                        .foregroundColor(.white)
+                }
+            }
+        )
     }
-    // MARK: - Preview
+}
+
+// MARK: - Preview
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
         AuthenticationView()
