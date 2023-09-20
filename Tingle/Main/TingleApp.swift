@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct TingleApp: App {
+    let persistenceController = PersistenceController.shared
     var body: some Scene {
         WindowGroup {
-            AuthenticationView()
+            AuthenticationView().environment(\.managedObjectContext, persistenceController.container.viewContext)
         }
     }
 }

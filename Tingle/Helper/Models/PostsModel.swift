@@ -4,13 +4,14 @@
 //
 //  Created by Ali Fayed on 20/09/2023.
 //
+import SwiftUI
 
 struct PostsModel: Codable {
     let posts: [Post]
     let total, skip, limit: Int
 }
 
-struct Post: Codable {
+struct Post: Codable, Identifiable {
     let id: Int
     let title, body: String
     let userID: Int

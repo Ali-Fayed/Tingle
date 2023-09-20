@@ -31,6 +31,8 @@
 		4CD7410A2ABB44D1004DD661 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741092ABB44D1004DD661 /* AuthenticationView.swift */; };
 		4CD7410C2ABB44DD004DD661 /* AuthenticationViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7410B2ABB44DD004DD661 /* AuthenticationViewModel .swift */; };
 		4CD7410E2ABB4FF4004DD661 /* Color+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7410D2ABB4FF4004DD661 /* Color+Ext.swift */; };
+		4CD741502ABB76D2004DD661 /* PostCustomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7414F2ABB76D2004DD661 /* PostCustomView.swift */; };
+		4CD741522ABB9199004DD661 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741512ABB9199004DD661 /* SearchBarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -78,6 +80,8 @@
 		4CD741092ABB44D1004DD661 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		4CD7410B2ABB44DD004DD661 /* AuthenticationViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationViewModel .swift"; sourceTree = "<group>"; };
 		4CD7410D2ABB4FF4004DD661 /* Color+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Color+Ext.swift"; sourceTree = "<group>"; };
+		4CD7414F2ABB76D2004DD661 /* PostCustomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostCustomView.swift; sourceTree = "<group>"; };
+		4CD741512ABB9199004DD661 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -253,6 +257,8 @@
 			children = (
 				4CD740B82ABB355C004DD661 /* PostsListView.swift */,
 				4CD740F92ABB381C004DD661 /* PostsListViewModel.swift */,
+				4CD7414F2ABB76D2004DD661 /* PostCustomView.swift */,
+				4CD741512ABB9199004DD661 /* SearchBarView.swift */,
 			);
 			path = PostsModule;
 			sourceTree = "<group>";
@@ -409,10 +415,12 @@
 				4CD740B92ABB355C004DD661 /* PostsListView.swift in Sources */,
 				4CD740F32ABB35E4004DD661 /* BaseRouter.swift in Sources */,
 				4CD740F62ABB35E4004DD661 /* NetworkingManger.swift in Sources */,
+				4CD741502ABB76D2004DD661 /* PostCustomView.swift in Sources */,
 				4CD740C32ABB355F004DD661 /* Tingle.xcdatamodeld in Sources */,
 				4CD740F22ABB35E4004DD661 /* RequestBuilder.swift in Sources */,
 				4CD740F82ABB35E4004DD661 /* APIError.swift in Sources */,
 				4CD740FF2ABB3C5B004DD661 /* AuthModel.swift in Sources */,
+				4CD741522ABB9199004DD661 /* SearchBarView.swift in Sources */,
 				4CD740B72ABB355C004DD661 /* TingleApp.swift in Sources */,
 				4CD740F72ABB35E4004DD661 /* ErrorCode.swift in Sources */,
 				4CD7410C2ABB44DD004DD661 /* AuthenticationViewModel .swift in Sources */,

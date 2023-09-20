@@ -5,13 +5,20 @@
 //  Created by Ali Fayed on 20/09/2023.
 //
 import SwiftUI
+import CoreData
 
 struct AuthenticationView: View {
     @StateObject private var viewModel = AuthenticationViewModel()
     @State private var username: String = ""
     @State private var password: String = ""
     @State private var isPasswordVisible: Bool = false
-    
+    @Environment(\.managedObjectContext) private var context
+    @FetchRequest(
+            entity: AuthSavedModel.entity(),
+            sortDescriptors: [],
+            predicate: nil
+        ) var authCachedModel: FetchedResults<AuthSavedModel>
+
     var body: some View {
         NavigationView {
             VStack {
@@ -63,7 +70,8 @@ struct AuthenticationView: View {
                 }
                 
                 Button(action: {
-                    viewModel.authenticateUser(userName: username, password: password)
+                    let cachedModelsArray = Array(authCachedModel)
+                    viewModel.authenticateUser(userName: username, password: password, context: context, cachedModel: cachedModelsArray)
                 }) {
                     Text("Sign In")
                         .font(.headline)
@@ -76,6 +84,8 @@ struct AuthenticationView: View {
                 .padding(.top, 20)
                 NavigationLink("", destination: PostsListView(), isActive: $viewModel.isAuthenticated)
                     .hidden()
+            }.onAppear{
+                print(authCachedModel.count)
             }.edgesIgnoringSafeArea(.top)
             
                 .padding()
