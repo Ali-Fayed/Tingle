@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		4CD740B72ABB355C004DD661 /* TingleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740B62ABB355C004DD661 /* TingleApp.swift */; };
-		4CD740B92ABB355C004DD661 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740B82ABB355C004DD661 /* ContentView.swift */; };
+		4CD740B92ABB355C004DD661 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740B82ABB355C004DD661 /* PostsListView.swift */; };
 		4CD740BB2ABB355F004DD661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD740BA2ABB355F004DD661 /* Assets.xcassets */; };
 		4CD740BE2ABB355F004DD661 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD740BD2ABB355F004DD661 /* Preview Assets.xcassets */; };
 		4CD740C02ABB355F004DD661 /* Persistence.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740BF2ABB355F004DD661 /* Persistence.swift */; };
@@ -16,6 +16,20 @@
 		4CD740CD2ABB355F004DD661 /* TingleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740CC2ABB355F004DD661 /* TingleTests.swift */; };
 		4CD740D72ABB355F004DD661 /* TingleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740D62ABB355F004DD661 /* TingleUITests.swift */; };
 		4CD740D92ABB355F004DD661 /* TingleUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740D82ABB355F004DD661 /* TingleUITestsLaunchTests.swift */; };
+		4CD740F12ABB35E4004DD661 /* HttpMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740E82ABB35E4004DD661 /* HttpMethod.swift */; };
+		4CD740F22ABB35E4004DD661 /* RequestBuilder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740E92ABB35E4004DD661 /* RequestBuilder.swift */; };
+		4CD740F32ABB35E4004DD661 /* BaseRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740EA2ABB35E4004DD661 /* BaseRouter.swift */; };
+		4CD740F42ABB35E4004DD661 /* NetworkReachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740EB2ABB35E4004DD661 /* NetworkReachability.swift */; };
+		4CD740F52ABB35E4004DD661 /* RequestRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740EC2ABB35E4004DD661 /* RequestRouter.swift */; };
+		4CD740F62ABB35E4004DD661 /* NetworkingManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740ED2ABB35E4004DD661 /* NetworkingManger.swift */; };
+		4CD740F72ABB35E4004DD661 /* ErrorCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740EF2ABB35E4004DD661 /* ErrorCode.swift */; };
+		4CD740F82ABB35E4004DD661 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740F02ABB35E4004DD661 /* APIError.swift */; };
+		4CD740FA2ABB381C004DD661 /* PostsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740F92ABB381C004DD661 /* PostsListViewModel.swift */; };
+		4CD740FD2ABB3C59004DD661 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740FC2ABB3C59004DD661 /* PostsModel.swift */; };
+		4CD740FF2ABB3C5B004DD661 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740FE2ABB3C5B004DD661 /* AuthModel.swift */; };
+		4CD741022ABB4161004DD661 /* BaseRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741012ABB4161004DD661 /* BaseRouterProtocol.swift */; };
+		4CD7410A2ABB44D1004DD661 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741092ABB44D1004DD661 /* AuthenticationView.swift */; };
+		4CD7410C2ABB44DD004DD661 /* AuthenticationViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7410B2ABB44DD004DD661 /* AuthenticationViewModel .swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -38,7 +52,7 @@
 /* Begin PBXFileReference section */
 		4CD740B32ABB355C004DD661 /* Tingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD740B62ABB355C004DD661 /* TingleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TingleApp.swift; sourceTree = "<group>"; };
-		4CD740B82ABB355C004DD661 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		4CD740B82ABB355C004DD661 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
 		4CD740BA2ABB355F004DD661 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4CD740BD2ABB355F004DD661 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		4CD740BF2ABB355F004DD661 /* Persistence.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Persistence.swift; sourceTree = "<group>"; };
@@ -48,6 +62,20 @@
 		4CD740D22ABB355F004DD661 /* TingleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TingleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD740D62ABB355F004DD661 /* TingleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TingleUITests.swift; sourceTree = "<group>"; };
 		4CD740D82ABB355F004DD661 /* TingleUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TingleUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4CD740E82ABB35E4004DD661 /* HttpMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HttpMethod.swift; sourceTree = "<group>"; };
+		4CD740E92ABB35E4004DD661 /* RequestBuilder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestBuilder.swift; sourceTree = "<group>"; };
+		4CD740EA2ABB35E4004DD661 /* BaseRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseRouter.swift; sourceTree = "<group>"; };
+		4CD740EB2ABB35E4004DD661 /* NetworkReachability.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkReachability.swift; sourceTree = "<group>"; };
+		4CD740EC2ABB35E4004DD661 /* RequestRouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RequestRouter.swift; sourceTree = "<group>"; };
+		4CD740ED2ABB35E4004DD661 /* NetworkingManger.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkingManger.swift; sourceTree = "<group>"; };
+		4CD740EF2ABB35E4004DD661 /* ErrorCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorCode.swift; sourceTree = "<group>"; };
+		4CD740F02ABB35E4004DD661 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
+		4CD740F92ABB381C004DD661 /* PostsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewModel.swift; sourceTree = "<group>"; };
+		4CD740FC2ABB3C59004DD661 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
+		4CD740FE2ABB3C5B004DD661 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		4CD741012ABB4161004DD661 /* BaseRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouterProtocol.swift; sourceTree = "<group>"; };
+		4CD741092ABB44D1004DD661 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
+		4CD7410B2ABB44DD004DD661 /* AuthenticationViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationViewModel .swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,11 +126,10 @@
 		4CD740B52ABB355C004DD661 /* Tingle */ = {
 			isa = PBXGroup;
 			children = (
-				4CD740B62ABB355C004DD661 /* TingleApp.swift */,
-				4CD740B82ABB355C004DD661 /* ContentView.swift */,
-				4CD740BA2ABB355F004DD661 /* Assets.xcassets */,
-				4CD740BF2ABB355F004DD661 /* Persistence.swift */,
-				4CD740C12ABB355F004DD661 /* Tingle.xcdatamodeld */,
+				4CD741042ABB4239004DD661 /* Main */,
+				4CD741052ABB4240004DD661 /* Modules */,
+				4CD740E52ABB3573004DD661 /* Helper */,
+				4CD741032ABB4230004DD661 /* Resources */,
 				4CD740BC2ABB355F004DD661 /* Preview Content */,
 			);
 			path = Tingle;
@@ -131,6 +158,109 @@
 				4CD740D82ABB355F004DD661 /* TingleUITestsLaunchTests.swift */,
 			);
 			path = TingleUITests;
+			sourceTree = "<group>";
+		};
+		4CD740E52ABB3573004DD661 /* Helper */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740E62ABB35E4004DD661 /* NetworkingLayer */,
+				4CD740FB2ABB3C53004DD661 /* Models */,
+			);
+			path = Helper;
+			sourceTree = "<group>";
+		};
+		4CD740E62ABB35E4004DD661 /* NetworkingLayer */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740ED2ABB35E4004DD661 /* NetworkingManger.swift */,
+				4CD741002ABB414D004DD661 /* NetworkRouter */,
+				4CD740E72ABB35E4004DD661 /* Others */,
+				4CD740EE2ABB35E4004DD661 /* Error */,
+			);
+			path = NetworkingLayer;
+			sourceTree = "<group>";
+		};
+		4CD740E72ABB35E4004DD661 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740E82ABB35E4004DD661 /* HttpMethod.swift */,
+				4CD740EB2ABB35E4004DD661 /* NetworkReachability.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		4CD740EE2ABB35E4004DD661 /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740EF2ABB35E4004DD661 /* ErrorCode.swift */,
+				4CD740F02ABB35E4004DD661 /* APIError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		4CD740FB2ABB3C53004DD661 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740FC2ABB3C59004DD661 /* PostsModel.swift */,
+				4CD740FE2ABB3C5B004DD661 /* AuthModel.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		4CD741002ABB414D004DD661 /* NetworkRouter */ = {
+			isa = PBXGroup;
+			children = (
+				4CD741012ABB4161004DD661 /* BaseRouterProtocol.swift */,
+				4CD740EA2ABB35E4004DD661 /* BaseRouter.swift */,
+				4CD740E92ABB35E4004DD661 /* RequestBuilder.swift */,
+				4CD740EC2ABB35E4004DD661 /* RequestRouter.swift */,
+			);
+			path = NetworkRouter;
+			sourceTree = "<group>";
+		};
+		4CD741032ABB4230004DD661 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740BF2ABB355F004DD661 /* Persistence.swift */,
+				4CD740BA2ABB355F004DD661 /* Assets.xcassets */,
+				4CD740C12ABB355F004DD661 /* Tingle.xcdatamodeld */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4CD741042ABB4239004DD661 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740B62ABB355C004DD661 /* TingleApp.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4CD741052ABB4240004DD661 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				4CD741072ABB425E004DD661 /* AuthenticationModule */,
+				4CD741062ABB4253004DD661 /* PostsModule */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		4CD741062ABB4253004DD661 /* PostsModule */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740B82ABB355C004DD661 /* PostsListView.swift */,
+				4CD740F92ABB381C004DD661 /* PostsListViewModel.swift */,
+			);
+			path = PostsModule;
+			sourceTree = "<group>";
+		};
+		4CD741072ABB425E004DD661 /* AuthenticationModule */ = {
+			isa = PBXGroup;
+			children = (
+				4CD741092ABB44D1004DD661 /* AuthenticationView.swift */,
+				4CD7410B2ABB44DD004DD661 /* AuthenticationViewModel .swift */,
+			);
+			path = AuthenticationModule;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -264,9 +394,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD740C02ABB355F004DD661 /* Persistence.swift in Sources */,
-				4CD740B92ABB355C004DD661 /* ContentView.swift in Sources */,
+				4CD741022ABB4161004DD661 /* BaseRouterProtocol.swift in Sources */,
+				4CD740B92ABB355C004DD661 /* PostsListView.swift in Sources */,
+				4CD740F32ABB35E4004DD661 /* BaseRouter.swift in Sources */,
+				4CD740F62ABB35E4004DD661 /* NetworkingManger.swift in Sources */,
 				4CD740C32ABB355F004DD661 /* Tingle.xcdatamodeld in Sources */,
+				4CD740F22ABB35E4004DD661 /* RequestBuilder.swift in Sources */,
+				4CD740F82ABB35E4004DD661 /* APIError.swift in Sources */,
+				4CD740FF2ABB3C5B004DD661 /* AuthModel.swift in Sources */,
 				4CD740B72ABB355C004DD661 /* TingleApp.swift in Sources */,
+				4CD740F72ABB35E4004DD661 /* ErrorCode.swift in Sources */,
+				4CD7410C2ABB44DD004DD661 /* AuthenticationViewModel .swift in Sources */,
+				4CD740FD2ABB3C59004DD661 /* PostsModel.swift in Sources */,
+				4CD740F12ABB35E4004DD661 /* HttpMethod.swift in Sources */,
+				4CD7410A2ABB44D1004DD661 /* AuthenticationView.swift in Sources */,
+				4CD740FA2ABB381C004DD661 /* PostsListViewModel.swift in Sources */,
+				4CD740F42ABB35E4004DD661 /* NetworkReachability.swift in Sources */,
+				4CD740F52ABB35E4004DD661 /* RequestRouter.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
