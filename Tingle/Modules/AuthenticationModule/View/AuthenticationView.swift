@@ -9,7 +9,7 @@ import CoreData
 
 struct AuthenticationView: View {
     // MARK: - Properties
-    @StateObject var viewModel = AuthenticationViewModel()
+    @StateObject var viewModel: AuthenticationViewModel
     // MARK: - CoreData
     @Environment(\.managedObjectContext) var context
     @FetchRequest(
@@ -17,7 +17,6 @@ struct AuthenticationView: View {
         sortDescriptors: [],
         predicate: nil
     ) var authCachedModel: FetchedResults<AuthSavedModel>
-
     // MARK: - View Body
     var body: some View {
         VStack(spacing: 10) {
@@ -51,6 +50,8 @@ struct AuthenticationView: View {
 // MARK: - Preview
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthenticationView()
+        let repo = AuthRepository(context: PersistenceController.shared.container.viewContext)
+        let viewModel = AuthenticationViewModel(repository: repo)
+        AuthenticationView(viewModel: viewModel)
     }
 }

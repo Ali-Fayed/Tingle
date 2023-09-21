@@ -16,7 +16,7 @@ struct PostsListView: View {
             List {
                 postsView()
             }.listStyle(.plain).onAppear {
-                viewModel.fetchPosts()                
+                viewModel.fetchPosts()
             }.onChange(of: viewModel.searchText) { newValue in
                 viewModel.searchPostsSearch(seachKeyWord: newValue)
             }.onChange(of: viewModel.selectedImage) { newValue in

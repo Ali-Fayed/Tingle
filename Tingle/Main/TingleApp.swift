@@ -10,9 +10,18 @@ import SwiftUI
 @main
 struct TingleApp: App {
     let persistenceController = PersistenceController.shared
+
     var body: some Scene {
         WindowGroup {
-            AuthenticationView().environment(\.managedObjectContext, persistenceController.container.viewContext)
+            configureView()
         }
     }
+    
+}
+extension TingleApp {
+    func configureView() -> some View {
+        let repo = AuthRepository(context: PersistenceController.shared.container.viewContext)
+        let viewModel = AuthenticationViewModel(repository: repo)
+        return AuthenticationView(viewModel: viewModel).environment(\.managedObjectContext, persistenceController.container.viewContext)
+  }
 }
