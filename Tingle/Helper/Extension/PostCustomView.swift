@@ -15,10 +15,9 @@ struct PostCustomView: View {
     var body: some View {
         VStack(alignment: .leading) {
             HStack {
-                RoundedBackgroundWithImage(backgroundColor: .white, imageName: postListModel.userImage, width: 50, hegiht: 50)
-                    .onTapGesture {
-                        viewModel.selectedImage = StringWrapper(name: postListModel.userImage)
-                    }
+                RoundedBackgroundWithImage(backgroundColor: .white, imageName: postListModel.userImage, width: 50, hegiht: 50).onTapGesture {
+                    viewModel.selectedImage = StringWrapper(name: postListModel.userImage)
+                }
                 VStack(alignment: .leading) {
                     Text(postListModel.userName)
                         .font(.headline)

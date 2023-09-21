@@ -20,4 +20,6 @@ struct AuthViewConstants {
     static let alertTitle = "Authentication Error"
     static let oKTitle = "OK"
     static let loadingTitle = "Loading..."
+    static let userNameStatic = "kminchelle"
+    static let passwordStatic = "0lelplR"
 }

@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct PostsListView: View {
-    @StateObject var viewModel = PostsListViewModel()
+    @StateObject var viewModel: PostsListViewModel
     var body: some View {
         searchBarView()
         Divider()
@@ -40,6 +40,9 @@ struct PostsListView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        PostsListView()
+        let repo = PostsListRepository()
+        let coordinator = PostsListCoordinator()
+        let viewModel = PostsListViewModel(repository: repo, coordinator: coordinator)
+        PostsListView(viewModel: viewModel)
     }
 }

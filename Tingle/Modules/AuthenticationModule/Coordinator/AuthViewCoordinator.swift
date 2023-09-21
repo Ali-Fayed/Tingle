@@ -15,7 +15,10 @@ class AuthViewCoordinator: ObservableObject {
         isPresentingPostsList = true
     }
     func postsListView() -> some View {
-        return PostsListView()
+        let repo = PostsListRepository()
+        let coordinator = PostsListCoordinator()
+        let viewModel = PostsListViewModel(repository: repo, coordinator: coordinator)
+        return PostsListView(viewModel: viewModel)
     }
     func presentAlertView() {
         isPresentingAlert = true

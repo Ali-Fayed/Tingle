@@ -44,6 +44,10 @@
 		4CD7416D2ABCFB49004DD661 /* AuthUserCachedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7416C2ABCFB49004DD661 /* AuthUserCachedModel.swift */; };
 		4CD7416F2ABCFB64004DD661 /* CoreDataCachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7416E2ABCFB64004DD661 /* CoreDataCachable.swift */; };
 		4CD741752ABCFD7F004DD661 /* AuthViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741742ABCFD7F004DD661 /* AuthViewCoordinator.swift */; };
+		4CD7417D2ABD03F4004DD661 /* PostsListRepoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7417C2ABD03F4004DD661 /* PostsListRepoProtocol.swift */; };
+		4CD7417F2ABD03FD004DD661 /* PostsListRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7417E2ABD03FD004DD661 /* PostsListRepository.swift */; };
+		4CD741812ABD0405004DD661 /* PostsListConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741802ABD0405004DD661 /* PostsListConstants.swift */; };
+		4CD741832ABD0410004DD661 /* PostsListCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741822ABD0410004DD661 /* PostsListCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -104,6 +108,10 @@
 		4CD7416C2ABCFB49004DD661 /* AuthUserCachedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserCachedModel.swift; sourceTree = "<group>"; };
 		4CD7416E2ABCFB64004DD661 /* CoreDataCachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCachable.swift; sourceTree = "<group>"; };
 		4CD741742ABCFD7F004DD661 /* AuthViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewCoordinator.swift; sourceTree = "<group>"; };
+		4CD7417C2ABD03F4004DD661 /* PostsListRepoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListRepoProtocol.swift; sourceTree = "<group>"; };
+		4CD7417E2ABD03FD004DD661 /* PostsListRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListRepository.swift; sourceTree = "<group>"; };
+		4CD741802ABD0405004DD661 /* PostsListConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListConstants.swift; sourceTree = "<group>"; };
+		4CD741822ABD0410004DD661 /* PostsListCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -268,8 +276,8 @@
 		4CD741052ABB4240004DD661 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				4CD741062ABB4253004DD661 /* PostsModule */,
 				4CD741072ABB425E004DD661 /* AuthenticationModule */,
+				4CD741062ABB4253004DD661 /* PostsModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -277,12 +285,11 @@
 		4CD741062ABB4253004DD661 /* PostsModule */ = {
 			isa = PBXGroup;
 			children = (
-				4CD740B82ABB355C004DD661 /* PostsListView.swift */,
-				4CD741622ABC9D47004DD661 /* PostsViewLibrary.swift */,
-				4CD740F92ABB381C004DD661 /* PostsListViewModel.swift */,
-				4CD7414F2ABB76D2004DD661 /* PostCustomView.swift */,
-				4CD741512ABB9199004DD661 /* SearchBarView.swift */,
-				4CD7415C2ABC7284004DD661 /* Model.swift */,
+				4CD741762ABD038E004DD661 /* View */,
+				4CD741772ABD0396004DD661 /* ViewModel */,
+				4CD7417A2ABD03C9004DD661 /* Repository */,
+				4CD7417B2ABD03D3004DD661 /* Constants */,
+				4CD741782ABD03B1004DD661 /* Coordinator */,
 			);
 			path = PostsModule;
 			sourceTree = "<group>";
@@ -303,6 +310,9 @@
 		4CD7410F2ABB4FFE004DD661 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
+				4CD7415C2ABC7284004DD661 /* Model.swift */,
+				4CD7414F2ABB76D2004DD661 /* PostCustomView.swift */,
+				4CD741512ABB9199004DD661 /* SearchBarView.swift */,
 				4CD7416E2ABCFB64004DD661 /* CoreDataCachable.swift */,
 				4CD7410D2ABB4FF4004DD661 /* Color+Ext.swift */,
 				4CD7415E2ABC9837004DD661 /* RoundedView.swift */,
@@ -359,6 +369,48 @@
 				4CD741742ABCFD7F004DD661 /* AuthViewCoordinator.swift */,
 			);
 			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4CD741762ABD038E004DD661 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740B82ABB355C004DD661 /* PostsListView.swift */,
+				4CD741622ABC9D47004DD661 /* PostsViewLibrary.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4CD741772ABD0396004DD661 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740F92ABB381C004DD661 /* PostsListViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		4CD741782ABD03B1004DD661 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4CD741822ABD0410004DD661 /* PostsListCoordinator.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
+		4CD7417A2ABD03C9004DD661 /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				4CD7417C2ABD03F4004DD661 /* PostsListRepoProtocol.swift */,
+				4CD7417E2ABD03FD004DD661 /* PostsListRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		4CD7417B2ABD03D3004DD661 /* Constants */ = {
+			isa = PBXGroup;
+			children = (
+				4CD741802ABD0405004DD661 /* PostsListConstants.swift */,
+			);
+			path = Constants;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,6 +545,8 @@
 			files = (
 				4CD740C02ABB355F004DD661 /* Persistence.swift in Sources */,
 				4CD741022ABB4161004DD661 /* BaseRouterProtocol.swift in Sources */,
+				4CD741832ABD0410004DD661 /* PostsListCoordinator.swift in Sources */,
+				4CD7417D2ABD03F4004DD661 /* PostsListRepoProtocol.swift in Sources */,
 				4CD740B92ABB355C004DD661 /* PostsListView.swift in Sources */,
 				4CD740F32ABB35E4004DD661 /* BaseRouter.swift in Sources */,
 				4CD740F62ABB35E4004DD661 /* NetworkingManger.swift in Sources */,
@@ -517,6 +571,8 @@
 				4CD741612ABC984E004DD661 /* StringWrapper.swift in Sources */,
 				4CD740F12ABB35E4004DD661 /* HttpMethod.swift in Sources */,
 				4CD7415F2ABC9837004DD661 /* RoundedView.swift in Sources */,
+				4CD7417F2ABD03FD004DD661 /* PostsListRepository.swift in Sources */,
+				4CD741812ABD0405004DD661 /* PostsListConstants.swift in Sources */,
 				4CD7410A2ABB44D1004DD661 /* AuthenticationView.swift in Sources */,
 				4CD7416D2ABCFB49004DD661 /* AuthUserCachedModel.swift in Sources */,
 				4CD740FA2ABB381C004DD661 /* PostsListViewModel.swift in Sources */,

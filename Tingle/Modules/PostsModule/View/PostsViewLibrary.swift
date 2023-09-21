@@ -10,7 +10,7 @@ import SwiftUI
 extension PostsListView {
     func postsView() -> some View {
         return ForEach(viewModel.posts) { post in
-            PostCustomView(postListModel: Modell(userName: "Jack Sully", closeMarkImage: "xmark.circle.fill", moreImage: "dots", userImage: "profile2", postDate: "2 Days Ago", postImages: ["list-image-one", "list-image-two", "list-image-three", "list-image-four"], postBody: post.body, isAlertVisible: viewModel.isDetailedPhotoViewAppeared), viewModel: viewModel)
+            PostCustomView(postListModel: Modell(userName: PostsListConstants.staticPostUserName, closeMarkImage: PostsListConstants.closeMarkImage, moreImage: PostsListConstants.moreImage, userImage: PostsListConstants.userImage, postDate: PostsListConstants.postDate, postImages: PostsListConstants.postImages, postBody: post.body, isAlertVisible: viewModel.coordinator.isPresentingAlert), viewModel: viewModel)
         }
     }
     func imageDetailsView(imageName: String) -> some View {
@@ -39,19 +39,28 @@ extension PostsListView {
                     }
                 }) {
                     HStack {
-                        Image("LOGO")
+                        Image(PostsListConstants.logoTitle)
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 60, height: 30)
                             .padding()
                         Spacer()
-                        Image(systemName: "magnifyingglass")
+                        Image(systemName: PostsListConstants.searchImage)
                             .alignmentGuide(.trailing) { _ in 0 }
                             .foregroundColor(.primary)
                             .padding()
                     }
                 }
             }
-        }.disabled(viewModel.isDetailedPhotoViewAppeared).padding(.leading, 10).padding(.trailing, 10)
+        }.padding(.leading, 10).padding(.trailing, 10)
+    }
+    func loadingIndicator() -> some View {
+        return Group {
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    .foregroundColor(.white)
+            }
+        }
     }
 }

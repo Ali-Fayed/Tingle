@@ -8,38 +8,45 @@
 import Foundation
 import Combine
 class PostsListViewModel: ObservableObject {
+    // MARK: - Propeties
+    private var repository: PostsListRepository
+    var coordinator: PostsListCoordinator
     private var subscriptions = Set< AnyCancellable > ()
     @Published var posts: [Post] = []
+    // MARK: - States
     @Published var searchText = ""
     @Published var isSearching = false
     @Published var selectedImage: StringWrapper? = nil
+    @Published var isLoading = false
     @Published var isDetailedPhotoViewAppeared = false
-    @Published var isMenuVisible = false // Track the menu visibility
+    // MARK: - Initalizer
+    init(repository: PostsListRepository, coordinator: PostsListCoordinator) {
+        self.repository = repository
+        self.coordinator = coordinator
+    }
     func fetchPosts() {
-        let request = NetworkingManger.shared.performRequest(router: RequestRouter.posts, model: PostsModel.self, shouldCache: false)
-        request.sink { completion in
+        self.isLoading = true
+        repository.fetchPosts().sink { completion in
             switch completion {
-            case .failure(let error):
-                print("Error: \(error)")
+            case .failure(_):
+                self.coordinator.presentAlert()
             case .finished:
-                break
+                self.isLoading = false
             }
         } receiveValue: { posts in
             DispatchQueue.main.async {
                 self.posts = posts.posts
-                print(posts.posts[0].body)
             }
         }.store(in: &subscriptions)
     }
     
     func searchPostsSearch(seachKeyWord: String) {
-        let request = NetworkingManger.shared.performRequest(router: RequestRouter.searchPosts(query: seachKeyWord), model: PostsModel.self, shouldCache: false)
-        request.sink { completion in
+        repository.searchPostsSearch(seachKeyWord: seachKeyWord).sink { completion in
             switch completion {
-            case .failure(let error):
-                print("Error: \(error)")
+            case .failure(_):
+                self.coordinator.presentAlert()
             case .finished:
-                break
+                self.isLoading = true
             }
         } receiveValue: { posts in
             DispatchQueue.main.async {

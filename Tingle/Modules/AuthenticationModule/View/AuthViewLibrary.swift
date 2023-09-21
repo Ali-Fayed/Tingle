@@ -6,9 +6,10 @@
 //
 
 import SwiftUI
+
 extension AuthenticationView {
     func authView() -> some View {
-       return VStack(spacing: 10) {
+        return VStack(spacing: 10) {
             renderTopImage()
             Spacer()
             VStack(spacing: 10) {
@@ -31,47 +32,47 @@ extension AuthenticationView {
             .font(Font.system(size: 25, weight: .bold))
             .padding()
     }
-        func renderUserNameTextField() -> some View {
-            return TextField(AuthViewConstants.userNameTFplacholder, text: $viewModel.username)
-                .padding()
-                .background(Color(.white))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 0.5)
-                )
-        }
-        func renderPasswordTextFields ()  -> some View {
-            return HStack {
-                if viewModel.isPasswordVisible {
-                    TextField(AuthViewConstants.passwordTFplacholder, text: $viewModel.password)
-                } else {
-                    SecureField(AuthViewConstants.passwordTFplacholder, text: $viewModel.password)
-                }
-                Button(action: {
-                    viewModel.isPasswordVisible.toggle()
-                }) {
-                    Image(systemName: viewModel.isPasswordVisible ? AuthViewConstants.eyeSlashImage : AuthViewConstants.eyeImage)
-                        .padding(.trailing, 10)
-                        .foregroundColor(.gray)
-                }
-            }.padding()
-                .background(Color(.white))
-                .overlay(
-                    RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 0.5)
-                )
-        }
-        func renderSignInButton () -> some View {
-            return Button(action: {
-                viewModel.authenticateUser(userName: "kminchelle", password: "0lelplR", context: context, cachedModel: Array(authCachedModel))
+    func renderUserNameTextField() -> some View {
+        return TextField(AuthViewConstants.userNameTFplacholder, text: $viewModel.username)
+            .padding()
+            .background(Color(.white))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 0.5)
+            )
+    }
+    func renderPasswordTextFields ()  -> some View {
+        return HStack {
+            if viewModel.isPasswordVisible {
+                TextField(AuthViewConstants.passwordTFplacholder, text: $viewModel.password)
+            } else {
+                SecureField(AuthViewConstants.passwordTFplacholder, text: $viewModel.password)
+            }
+            Button(action: {
+                viewModel.isPasswordVisible.toggle()
             }) {
-                Text(AuthViewConstants.signInText)
-                    .font(.headline)
-                    .foregroundColor(.white)
-                    .padding()
-                    .frame(maxWidth: .infinity)
-                    .background(Color(hex: AuthViewConstants.viewColor))
-                    .cornerRadius(30)
-            }.padding(.top, 20)
-        }
+                Image(systemName: viewModel.isPasswordVisible ? AuthViewConstants.eyeSlashImage : AuthViewConstants.eyeImage)
+                    .padding(.trailing, 10)
+                    .foregroundColor(.gray)
+            }
+        }.padding()
+            .background(Color(.white))
+            .overlay(
+                RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 0.5)
+            )
+    }
+    func renderSignInButton () -> some View {
+        return Button(action: {
+            viewModel.authenticateUser(userName: AuthViewConstants.userNameStatic, password: AuthViewConstants.passwordStatic, context: context, cachedModel: Array(authCachedModel))
+        }) {
+            Text(AuthViewConstants.signInText)
+                .font(.headline)
+                .foregroundColor(.white)
+                .padding()
+                .frame(maxWidth: .infinity)
+                .background(Color(hex: AuthViewConstants.viewColor))
+                .cornerRadius(30)
+        }.padding(.top, 20)
+    }
     func loadingIndicator() -> some View {
         return Group {
             if viewModel.isLoading {
