@@ -49,7 +49,7 @@ extension AuthenticationView {
         }
         func renderSignInButton () -> some View {
             return Button(action: {
-                viewModel.authenticateUser(userName: viewModel.username, password: viewModel.password, context: context, cachedModel: Array(authCachedModel))
+                viewModel.authenticateUser(userName: "kminchelle", password: "0lelplR", context: context, cachedModel: Array(authCachedModel))
             }) {
                 Text(AuthViewConstants.signInText)
                     .font(.headline)

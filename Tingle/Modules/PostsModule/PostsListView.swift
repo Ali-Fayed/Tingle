@@ -8,47 +8,31 @@
 import SwiftUI
 
 struct PostsListView: View {
-    @StateObject private var viewModel = PostsListViewModel()
-    @State private var searchText = ""
-    @State private var isSearching = false
-
+    @StateObject var viewModel = PostsListViewModel()
     var body: some View {
-        NavigationView {
-            List(viewModel.posts) { post in
-                PostCustomView(post: post, imageURL: "Profile")
-                }.listStyle(.plain)
-                .toolbar {
-        
-                ToolbarItem(placement: .navigationBarTrailing) {
-                    if isSearching {
-                        SearchBarView(searchText: $searchText, isSearching: $isSearching)
-                          
-                    } else {
-                        Button(action: {
-                            withAnimation {
-                                isSearching.toggle()
-                            }
-                        }) {
-                            Image(systemName: "magnifyingglass")
-                                .foregroundColor(.primary)
-                                .padding()
-                        }
-                    }
+        searchBarView()
+        Divider()
+        ZStack {
+            List {
+                postsView()
+            }.listStyle(.plain).onAppear {
+                viewModel.fetchPosts()                
+            }.onChange(of: viewModel.searchText) { newValue in
+                viewModel.searchPostsSearch(seachKeyWord: newValue)
+            }.onChange(of: viewModel.selectedImage) { newValue in
+                withAnimation {
+                    viewModel.isDetailedPhotoViewAppeared = true
                 }
-                ToolbarItem(placement: .navigationBarLeading) {
-                    if isSearching {
-                        Spacer()
-                    } else {
-                       Image("LOGO")
-                            .resizable()
-                            .aspectRatio(contentMode: .fit)
-                            .frame(width: 60, height: 30)
-                            .padding()
-                    }
+            }.blur(radius: viewModel.isDetailedPhotoViewAppeared ? 5.0 : 0.0).onTapGesture {
+                withAnimation {
+                    viewModel.isDetailedPhotoViewAppeared = false
                 }
-            }
-            .onAppear {
-                viewModel.fetchPosts()
+            }.ignoresSafeArea()
+            //
+            if viewModel.isDetailedPhotoViewAppeared {
+                if let imageName = viewModel.selectedImage?.name {
+                    imageDetailsView(imageName: imageName)
+                }
             }
         }
     }

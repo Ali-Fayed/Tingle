@@ -19,4 +19,5 @@ struct AuthViewConstants {
     static let errorMessage = "Login error please check your entered data"
     static let alertTitle = "Authentication Error"
     static let oKTitle = "OK"
+    static let loadingTitle = "Loading..."
 }

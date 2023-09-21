@@ -34,8 +34,8 @@ class AuthenticationViewModel: ObservableObject {
                 self.isLoading = false
             case .failure(_):
                 self.isAuthenticated = true
-                self.isAlertShown = true
-                self.alertMessage = AuthViewConstants.errorMessage
+//                self.isAlertShown = true
+//                self.alertMessage = AuthViewConstants.errorMessage
                 self.isLoading = false
             }
         } receiveValue: { authModel in

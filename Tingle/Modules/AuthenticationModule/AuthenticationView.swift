@@ -10,8 +10,6 @@ import CoreData
 struct AuthenticationView: View {
     // MARK: - Properties
     @StateObject var viewModel = AuthenticationViewModel()
-    @State private var isSheetPresented = false // Flag to control the sheet presentation
-
     // MARK: - CoreData
     @Environment(\.managedObjectContext) var context
     @FetchRequest(
@@ -41,8 +39,8 @@ struct AuthenticationView: View {
         .overlay(
             Group {
                 if viewModel.isLoading {
-                    ProgressView("Loading...")
-                        .progressViewStyle(CircularProgressViewStyle(tint: .white)) // Change the tint color here
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
                         .foregroundColor(.white)
                 }
             }

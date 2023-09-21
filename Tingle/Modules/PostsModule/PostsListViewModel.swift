@@ -10,7 +10,11 @@ import Combine
 class PostsListViewModel: ObservableObject {
     private var subscriptions = Set< AnyCancellable > ()
     @Published var posts: [Post] = []
-
+    @Published var searchText = ""
+    @Published var isSearching = false
+    @Published var selectedImage: StringWrapper? = nil
+    @Published var isDetailedPhotoViewAppeared = false
+    @Published var isMenuVisible = false // Track the menu visibility
     func fetchPosts() {
         let request = NetworkingManger.shared.performRequest(router: RequestRouter.posts, model: PostsModel.self, shouldCache: false)
         request.sink { completion in
@@ -40,7 +44,6 @@ class PostsListViewModel: ObservableObject {
         } receiveValue: { posts in
             DispatchQueue.main.async {
                 self.posts = posts.posts
-                print(posts.posts[0].body)
             }
         }.store(in: &subscriptions)
     }

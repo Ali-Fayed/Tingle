@@ -35,6 +35,10 @@
 		4CD741522ABB9199004DD661 /* SearchBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741512ABB9199004DD661 /* SearchBarView.swift */; };
 		4CD741542ABB9441004DD661 /* AuthViewConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741532ABB9441004DD661 /* AuthViewConstants.swift */; };
 		4CD741562ABB97ED004DD661 /* AuthViewLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741552ABB97EC004DD661 /* AuthViewLibrary.swift */; };
+		4CD7415D2ABC7284004DD661 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7415C2ABC7284004DD661 /* Model.swift */; };
+		4CD7415F2ABC9837004DD661 /* RoundedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7415E2ABC9837004DD661 /* RoundedView.swift */; };
+		4CD741612ABC984E004DD661 /* StringWrapper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741602ABC984E004DD661 /* StringWrapper.swift */; };
+		4CD741632ABC9D47004DD661 /* PostsViewLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741622ABC9D47004DD661 /* PostsViewLibrary.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -86,6 +90,10 @@
 		4CD741512ABB9199004DD661 /* SearchBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBarView.swift; sourceTree = "<group>"; };
 		4CD741532ABB9441004DD661 /* AuthViewConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewConstants.swift; sourceTree = "<group>"; };
 		4CD741552ABB97EC004DD661 /* AuthViewLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewLibrary.swift; sourceTree = "<group>"; };
+		4CD7415C2ABC7284004DD661 /* Model.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Model.swift; sourceTree = "<group>"; };
+		4CD7415E2ABC9837004DD661 /* RoundedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedView.swift; sourceTree = "<group>"; };
+		4CD741602ABC984E004DD661 /* StringWrapper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringWrapper.swift; sourceTree = "<group>"; };
+		4CD741622ABC9D47004DD661 /* PostsViewLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewLibrary.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -263,6 +271,8 @@
 				4CD740F92ABB381C004DD661 /* PostsListViewModel.swift */,
 				4CD7414F2ABB76D2004DD661 /* PostCustomView.swift */,
 				4CD741512ABB9199004DD661 /* SearchBarView.swift */,
+				4CD7415C2ABC7284004DD661 /* Model.swift */,
+				4CD741622ABC9D47004DD661 /* PostsViewLibrary.swift */,
 			);
 			path = PostsModule;
 			sourceTree = "<group>";
@@ -282,6 +292,8 @@
 			isa = PBXGroup;
 			children = (
 				4CD7410D2ABB4FF4004DD661 /* Color+Ext.swift */,
+				4CD7415E2ABC9837004DD661 /* RoundedView.swift */,
+				4CD741602ABC984E004DD661 /* StringWrapper.swift */,
 			);
 			path = Extension;
 			sourceTree = "<group>";
@@ -426,14 +438,18 @@
 				4CD740C32ABB355F004DD661 /* Tingle.xcdatamodeld in Sources */,
 				4CD740F22ABB35E4004DD661 /* RequestBuilder.swift in Sources */,
 				4CD740F82ABB35E4004DD661 /* APIError.swift in Sources */,
+				4CD7415D2ABC7284004DD661 /* Model.swift in Sources */,
 				4CD740FF2ABB3C5B004DD661 /* AuthModel.swift in Sources */,
 				4CD741522ABB9199004DD661 /* SearchBarView.swift in Sources */,
 				4CD740B72ABB355C004DD661 /* TingleApp.swift in Sources */,
 				4CD740F72ABB35E4004DD661 /* ErrorCode.swift in Sources */,
 				4CD7410C2ABB44DD004DD661 /* AuthenticationViewModel .swift in Sources */,
+				4CD741632ABC9D47004DD661 /* PostsViewLibrary.swift in Sources */,
 				4CD741542ABB9441004DD661 /* AuthViewConstants.swift in Sources */,
 				4CD740FD2ABB3C59004DD661 /* PostsModel.swift in Sources */,
+				4CD741612ABC984E004DD661 /* StringWrapper.swift in Sources */,
 				4CD740F12ABB35E4004DD661 /* HttpMethod.swift in Sources */,
+				4CD7415F2ABC9837004DD661 /* RoundedView.swift in Sources */,
 				4CD7410A2ABB44D1004DD661 /* AuthenticationView.swift in Sources */,
 				4CD740FA2ABB381C004DD661 /* PostsListViewModel.swift in Sources */,
 				4CD740F42ABB35E4004DD661 /* NetworkReachability.swift in Sources */,
