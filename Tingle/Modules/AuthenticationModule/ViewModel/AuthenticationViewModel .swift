@@ -12,17 +12,18 @@ import CoreData
 class AuthenticationViewModel: ObservableObject {
     // MARK: - Propeties
     private var repository: AuthRepository
+    var coordinator: AuthViewCoordinator
     private var subscriptionsBag = Set< AnyCancellable>()
-    @Published var authModel: AuthModel?
-    @Published var isAuthenticated = false
+    // MARK: - States
     @Published var isPasswordVisible = false
     @Published var isLoading = false
-    @Published var isAlertShown = false
     @Published var alertMessage = ""
     @Published var username = ""
     @Published var password = ""
-    init(repository: AuthRepository) {
-          self.repository = repository
+    // MARK: - Initalizer
+    init(repository: AuthRepository, coordinator: AuthViewCoordinator) {
+        self.repository = repository
+        self.coordinator = coordinator
     }
     // MARK: - Methods
     func authenticateUser(userName: String, password: String, context: NSManagedObjectContext, cachedModel: [AuthSavedModel]) {
@@ -30,17 +31,16 @@ class AuthenticationViewModel: ObservableObject {
         repository.authenticateUser(userName: userName, password: password).sink { completion in
             switch completion {
             case .finished:
-                self.isAuthenticated = true
+                self.coordinator.isPresentingPostsList = true
                 self.isLoading = false
             case .failure(_):
-                self.isAuthenticated = true
+                self.coordinator.isPresentingPostsList = true
 //                self.isAlertShown = true
 //                self.alertMessage = AuthViewConstants.errorMessage
                 self.isLoading = false
             }
         } receiveValue: { authModel in
             DispatchQueue.main.async {
-                self.authModel = authModel
                 self.cacheAuthenticatedUserData(authResponse: authModel, context: context, cachedModels: cachedModel)
             }
         }.store(in: &subscriptionsBag)

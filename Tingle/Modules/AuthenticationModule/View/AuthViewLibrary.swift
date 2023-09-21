@@ -7,6 +7,18 @@
 
 import SwiftUI
 extension AuthenticationView {
+    func authView() -> some View {
+       return VStack(spacing: 10) {
+            renderTopImage()
+            Spacer()
+            VStack(spacing: 10) {
+                renderWelcomeTitle()
+                renderUserNameTextField()
+                renderPasswordTextFields()
+                renderSignInButton()
+            }
+        }.padding()
+    }
     func renderTopImage() -> some View {
         return Image(AuthViewConstants.topViewImage)
             .resizable()
@@ -60,4 +72,13 @@ extension AuthenticationView {
                     .cornerRadius(30)
             }.padding(.top, 20)
         }
+    func loadingIndicator() -> some View {
+        return Group {
+            if viewModel.isLoading {
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                    .foregroundColor(.white)
+            }
+        }
+    }
 }

@@ -43,6 +43,7 @@
 		4CD7416A2ABCF798004DD661 /* AuthRepositoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741692ABCF798004DD661 /* AuthRepositoryProtocol.swift */; };
 		4CD7416D2ABCFB49004DD661 /* AuthUserCachedModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7416C2ABCFB49004DD661 /* AuthUserCachedModel.swift */; };
 		4CD7416F2ABCFB64004DD661 /* CoreDataCachable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7416E2ABCFB64004DD661 /* CoreDataCachable.swift */; };
+		4CD741752ABCFD7F004DD661 /* AuthViewCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741742ABCFD7F004DD661 /* AuthViewCoordinator.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -102,6 +103,7 @@
 		4CD741692ABCF798004DD661 /* AuthRepositoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthRepositoryProtocol.swift; sourceTree = "<group>"; };
 		4CD7416C2ABCFB49004DD661 /* AuthUserCachedModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUserCachedModel.swift; sourceTree = "<group>"; };
 		4CD7416E2ABCFB64004DD661 /* CoreDataCachable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataCachable.swift; sourceTree = "<group>"; };
+		4CD741742ABCFD7F004DD661 /* AuthViewCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewCoordinator.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,8 +293,9 @@
 				4CD741722ABCFCB8004DD661 /* View */,
 				4CD741702ABCFCA4004DD661 /* ViewModel */,
 				4CD741682ABCF78C004DD661 /* Repository */,
+				4CD741732ABCFD79004DD661 /* Coordinator */,
 				4CD741712ABCFCAC004DD661 /* Constants */,
-				4CD7416B2ABCFB3E004DD661 /* CoreDataModel */,
+				4CD7416B2ABCFB3E004DD661 /* CachedModel */,
 			);
 			path = AuthenticationModule;
 			sourceTree = "<group>";
@@ -311,18 +314,18 @@
 		4CD741682ABCF78C004DD661 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				4CD741642ABCF07B004DD661 /* AuthRepository.swift */,
 				4CD741692ABCF798004DD661 /* AuthRepositoryProtocol.swift */,
+				4CD741642ABCF07B004DD661 /* AuthRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
 		};
-		4CD7416B2ABCFB3E004DD661 /* CoreDataModel */ = {
+		4CD7416B2ABCFB3E004DD661 /* CachedModel */ = {
 			isa = PBXGroup;
 			children = (
 				4CD7416C2ABCFB49004DD661 /* AuthUserCachedModel.swift */,
 			);
-			path = CoreDataModel;
+			path = CachedModel;
 			sourceTree = "<group>";
 		};
 		4CD741702ABCFCA4004DD661 /* ViewModel */ = {
@@ -348,6 +351,14 @@
 				4CD741552ABB97EC004DD661 /* AuthViewLibrary.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4CD741732ABCFD79004DD661 /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				4CD741742ABCFD7F004DD661 /* AuthViewCoordinator.swift */,
+			);
+			path = Coordinator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,6 +496,7 @@
 				4CD740B92ABB355C004DD661 /* PostsListView.swift in Sources */,
 				4CD740F32ABB35E4004DD661 /* BaseRouter.swift in Sources */,
 				4CD740F62ABB35E4004DD661 /* NetworkingManger.swift in Sources */,
+				4CD741752ABCFD7F004DD661 /* AuthViewCoordinator.swift in Sources */,
 				4CD741652ABCF07B004DD661 /* AuthRepository.swift in Sources */,
 				4CD741562ABB97ED004DD661 /* AuthViewLibrary.swift in Sources */,
 				4CD741502ABB76D2004DD661 /* PostCustomView.swift in Sources */,
