@@ -1,4 +1,3 @@
-
 ![Git](https://github.com/Ali-Fayed/orghosting/assets/72504852/d65774c6-a3d2-45bb-b6a8-9eceb714951e)
 
 ### This is Tingle - iOS Native App Written in [Swift][Swift] 👋
