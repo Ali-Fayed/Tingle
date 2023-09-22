@@ -7,6 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4CC8A8AE2ABDF2F300FEBC11 /* AuthUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8AD2ABDF2F300FEBC11 /* AuthUseCaseInterface.swift */; };
+		4CC8A8B02ABDF2F600FEBC11 /* AuthUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8AF2ABDF2F600FEBC11 /* AuthUseCase.swift */; };
+		4CC8A8B52ABDF4B100FEBC11 /* AuthViewRemoteInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8B42ABDF4B100FEBC11 /* AuthViewRemoteInterface.swift */; };
+		4CC8A8B72ABDF51000FEBC11 /* AuthViewRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8B62ABDF51000FEBC11 /* AuthViewRemote.swift */; };
+		4CC8A8BA2ABDF77A00FEBC11 /* AuthDataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8B92ABDF77A00FEBC11 /* AuthDataModel.swift */; };
+		4CC8A8C42ABDFDD600FEBC11 /* AuthViewStubGenerator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8C32ABDFDD600FEBC11 /* AuthViewStubGenerator.swift */; };
+		4CC8A8C62ABDFEE900FEBC11 /* Mocks.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8C52ABDFEE900FEBC11 /* Mocks.swift */; };
+		4CC8A8CE2ABE048800FEBC11 /* PostsViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8CD2ABE048800FEBC11 /* PostsViewUseCase.swift */; };
+		4CC8A8D02ABE049300FEBC11 /* PostsViewUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8CF2ABE049300FEBC11 /* PostsViewUseCaseProtocol.swift */; };
+		4CC8A8D22ABE04A600FEBC11 /* PostsViewSearchUseCaseProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8D12ABE04A600FEBC11 /* PostsViewSearchUseCaseProtocol.swift */; };
+		4CC8A8D42ABE04B200FEBC11 /* PostsViewSearchUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8D32ABE04B200FEBC11 /* PostsViewSearchUseCase.swift */; };
+		4CC8A8DA2ABE04FE00FEBC11 /* PostsViewRemoteProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8D92ABE04FE00FEBC11 /* PostsViewRemoteProtocol.swift */; };
+		4CC8A8DC2ABE050800FEBC11 /* PostsViewRemote.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A8DB2ABE050800FEBC11 /* PostsViewRemote.swift */; };
 		4CD740B72ABB355C004DD661 /* TingleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740B62ABB355C004DD661 /* TingleApp.swift */; };
 		4CD740B92ABB355C004DD661 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740B82ABB355C004DD661 /* PostsListView.swift */; };
 		4CD740BB2ABB355F004DD661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD740BA2ABB355F004DD661 /* Assets.xcassets */; };
@@ -26,7 +39,7 @@
 		4CD740F82ABB35E4004DD661 /* APIError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740F02ABB35E4004DD661 /* APIError.swift */; };
 		4CD740FA2ABB381C004DD661 /* PostsListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740F92ABB381C004DD661 /* PostsListViewModel.swift */; };
 		4CD740FD2ABB3C59004DD661 /* PostsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740FC2ABB3C59004DD661 /* PostsModel.swift */; };
-		4CD740FF2ABB3C5B004DD661 /* AuthModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740FE2ABB3C5B004DD661 /* AuthModel.swift */; };
+		4CD740FF2ABB3C5B004DD661 /* AuthEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740FE2ABB3C5B004DD661 /* AuthEntity.swift */; };
 		4CD741022ABB4161004DD661 /* BaseRouterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741012ABB4161004DD661 /* BaseRouterProtocol.swift */; };
 		4CD7410A2ABB44D1004DD661 /* AuthenticationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD741092ABB44D1004DD661 /* AuthenticationView.swift */; };
 		4CD7410C2ABB44DD004DD661 /* AuthenticationViewModel .swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD7410B2ABB44DD004DD661 /* AuthenticationViewModel .swift */; };
@@ -68,6 +81,20 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		4CC8A8AD2ABDF2F300FEBC11 /* AuthUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCaseInterface.swift; sourceTree = "<group>"; };
+		4CC8A8AF2ABDF2F600FEBC11 /* AuthUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthUseCase.swift; sourceTree = "<group>"; };
+		4CC8A8B42ABDF4B100FEBC11 /* AuthViewRemoteInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewRemoteInterface.swift; sourceTree = "<group>"; };
+		4CC8A8B62ABDF51000FEBC11 /* AuthViewRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewRemote.swift; sourceTree = "<group>"; };
+		4CC8A8B92ABDF77A00FEBC11 /* AuthDataModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthDataModel.swift; sourceTree = "<group>"; };
+		4CC8A8C22ABDFDBE00FEBC11 /* authResponse.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = authResponse.json; sourceTree = "<group>"; };
+		4CC8A8C32ABDFDD600FEBC11 /* AuthViewStubGenerator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewStubGenerator.swift; sourceTree = "<group>"; };
+		4CC8A8C52ABDFEE900FEBC11 /* Mocks.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mocks.swift; sourceTree = "<group>"; };
+		4CC8A8CD2ABE048800FEBC11 /* PostsViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewUseCase.swift; sourceTree = "<group>"; };
+		4CC8A8CF2ABE049300FEBC11 /* PostsViewUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewUseCaseProtocol.swift; sourceTree = "<group>"; };
+		4CC8A8D12ABE04A600FEBC11 /* PostsViewSearchUseCaseProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewSearchUseCaseProtocol.swift; sourceTree = "<group>"; };
+		4CC8A8D32ABE04B200FEBC11 /* PostsViewSearchUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewSearchUseCase.swift; sourceTree = "<group>"; };
+		4CC8A8D92ABE04FE00FEBC11 /* PostsViewRemoteProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewRemoteProtocol.swift; sourceTree = "<group>"; };
+		4CC8A8DB2ABE050800FEBC11 /* PostsViewRemote.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewRemote.swift; sourceTree = "<group>"; };
 		4CD740B32ABB355C004DD661 /* Tingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD740B62ABB355C004DD661 /* TingleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TingleApp.swift; sourceTree = "<group>"; };
 		4CD740B82ABB355C004DD661 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
@@ -90,7 +117,7 @@
 		4CD740F02ABB35E4004DD661 /* APIError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = APIError.swift; sourceTree = "<group>"; };
 		4CD740F92ABB381C004DD661 /* PostsListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListViewModel.swift; sourceTree = "<group>"; };
 		4CD740FC2ABB3C59004DD661 /* PostsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsModel.swift; sourceTree = "<group>"; };
-		4CD740FE2ABB3C5B004DD661 /* AuthModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthModel.swift; sourceTree = "<group>"; };
+		4CD740FE2ABB3C5B004DD661 /* AuthEntity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthEntity.swift; sourceTree = "<group>"; };
 		4CD741012ABB4161004DD661 /* BaseRouterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseRouterProtocol.swift; sourceTree = "<group>"; };
 		4CD741092ABB44D1004DD661 /* AuthenticationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticationView.swift; sourceTree = "<group>"; };
 		4CD7410B2ABB44DD004DD661 /* AuthenticationViewModel .swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "AuthenticationViewModel .swift"; sourceTree = "<group>"; };
@@ -139,6 +166,203 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4CC8A8A82ABDF27600FEBC11 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8B82ABDF6AE00FEBC11 /* DtaModel */,
+				4CC8A8B32ABDF49500FEBC11 /* Remote */,
+				4CD7416B2ABCFB3E004DD661 /* CachedModel */,
+				4CD741682ABCF78C004DD661 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4CC8A8A92ABDF27B00FEBC11 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8AB2ABDF2A600FEBC11 /* Entity */,
+				4CC8A8B12ABDF47300FEBC11 /* Interfaces */,
+				4CC8A8AC2ABDF2C300FEBC11 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4CC8A8AA2ABDF28300FEBC11 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4CD741722ABCFCB8004DD661 /* View */,
+				4CD741702ABCFCA4004DD661 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4CC8A8AB2ABDF2A600FEBC11 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740FE2ABB3C5B004DD661 /* AuthEntity.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4CC8A8AC2ABDF2C300FEBC11 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8BB2ABDFBF900FEBC11 /* AuthUseCase */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		4CC8A8B12ABDF47300FEBC11 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				4CD741692ABCF798004DD661 /* AuthRepositoryProtocol.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		4CC8A8B32ABDF49500FEBC11 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8B42ABDF4B100FEBC11 /* AuthViewRemoteInterface.swift */,
+				4CC8A8B62ABDF51000FEBC11 /* AuthViewRemote.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		4CC8A8B82ABDF6AE00FEBC11 /* DtaModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8B92ABDF77A00FEBC11 /* AuthDataModel.swift */,
+			);
+			path = DtaModel;
+			sourceTree = "<group>";
+		};
+		4CC8A8BB2ABDFBF900FEBC11 /* AuthUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8AD2ABDF2F300FEBC11 /* AuthUseCaseInterface.swift */,
+				4CC8A8AF2ABDF2F600FEBC11 /* AuthUseCase.swift */,
+			);
+			path = AuthUseCase;
+			sourceTree = "<group>";
+		};
+		4CC8A8C12ABDFD9B00FEBC11 /* AuthViewUnitTest */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8C22ABDFDBE00FEBC11 /* authResponse.json */,
+				4CC8A8C32ABDFDD600FEBC11 /* AuthViewStubGenerator.swift */,
+				4CC8A8C52ABDFEE900FEBC11 /* Mocks.swift */,
+			);
+			path = AuthViewUnitTest;
+			sourceTree = "<group>";
+		};
+		4CC8A8C72ABE040000FEBC11 /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8CC2ABE045B00FEBC11 /* Entity */,
+				4CC8A8CB2ABE043100FEBC11 /* Interfaces */,
+				4CC8A8CA2ABE042C00FEBC11 /* UseCase */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		4CC8A8C82ABE040700FEBC11 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8D82ABE04E100FEBC11 /* DataModel */,
+				4CC8A8D72ABE04DC00FEBC11 /* Remote */,
+				4CD7417A2ABD03C9004DD661 /* Repository */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		4CC8A8C92ABE040B00FEBC11 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				4CD741762ABD038E004DD661 /* View */,
+				4CD741772ABD0396004DD661 /* ViewModel */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		4CC8A8CA2ABE042C00FEBC11 /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8D52ABE04B700FEBC11 /* PostsViewUseCase */,
+				4CC8A8D62ABE04C600FEBC11 /* PostsViewSearchUseCase */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		4CC8A8CB2ABE043100FEBC11 /* Interfaces */ = {
+			isa = PBXGroup;
+			children = (
+				4CD7417C2ABD03F4004DD661 /* PostsListRepoProtocol.swift */,
+			);
+			path = Interfaces;
+			sourceTree = "<group>";
+		};
+		4CC8A8CC2ABE045B00FEBC11 /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				4CD740FC2ABB3C59004DD661 /* PostsModel.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		4CC8A8D52ABE04B700FEBC11 /* PostsViewUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8CF2ABE049300FEBC11 /* PostsViewUseCaseProtocol.swift */,
+				4CC8A8CD2ABE048800FEBC11 /* PostsViewUseCase.swift */,
+			);
+			path = PostsViewUseCase;
+			sourceTree = "<group>";
+		};
+		4CC8A8D62ABE04C600FEBC11 /* PostsViewSearchUseCase */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8D12ABE04A600FEBC11 /* PostsViewSearchUseCaseProtocol.swift */,
+				4CC8A8D32ABE04B200FEBC11 /* PostsViewSearchUseCase.swift */,
+			);
+			path = PostsViewSearchUseCase;
+			sourceTree = "<group>";
+		};
+		4CC8A8D72ABE04DC00FEBC11 /* Remote */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A8D92ABE04FE00FEBC11 /* PostsViewRemoteProtocol.swift */,
+				4CC8A8DB2ABE050800FEBC11 /* PostsViewRemote.swift */,
+			);
+			path = Remote;
+			sourceTree = "<group>";
+		};
+		4CC8A8D82ABE04E100FEBC11 /* DataModel */ = {
+			isa = PBXGroup;
+			children = (
+				4CD7415C2ABC7284004DD661 /* Model.swift */,
+			);
+			path = DataModel;
+			sourceTree = "<group>";
+		};
+		4CC8A8DD2ABE091E00FEBC11 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4CD7417B2ABD03D3004DD661 /* Constants */,
+				4CD741782ABD03B1004DD661 /* Coordinator */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		4CC8A8DE2ABE092D00FEBC11 /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4CD741732ABCFD79004DD661 /* Coordinator */,
+				4CD741712ABCFCAC004DD661 /* Constants */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
 		4CD740AA2ABB355C004DD661 = {
 			isa = PBXGroup;
 			children = (
@@ -182,6 +406,7 @@
 		4CD740CB2ABB355F004DD661 /* TingleTests */ = {
 			isa = PBXGroup;
 			children = (
+				4CC8A8C12ABDFD9B00FEBC11 /* AuthViewUnitTest */,
 				4CD740CC2ABB355F004DD661 /* TingleTests.swift */,
 			);
 			path = TingleTests;
@@ -200,7 +425,6 @@
 			isa = PBXGroup;
 			children = (
 				4CD740E62ABB35E4004DD661 /* NetworkingLayer */,
-				4CD740FB2ABB3C53004DD661 /* Models */,
 				4CD7410F2ABB4FFE004DD661 /* Extension */,
 			);
 			path = Helper;
@@ -233,15 +457,6 @@
 				4CD740F02ABB35E4004DD661 /* APIError.swift */,
 			);
 			path = Error;
-			sourceTree = "<group>";
-		};
-		4CD740FB2ABB3C53004DD661 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				4CD740FC2ABB3C59004DD661 /* PostsModel.swift */,
-				4CD740FE2ABB3C5B004DD661 /* AuthModel.swift */,
-			);
-			path = Models;
 			sourceTree = "<group>";
 		};
 		4CD741002ABB414D004DD661 /* NetworkRouter */ = {
@@ -285,11 +500,10 @@
 		4CD741062ABB4253004DD661 /* PostsModule */ = {
 			isa = PBXGroup;
 			children = (
-				4CD741762ABD038E004DD661 /* View */,
-				4CD741772ABD0396004DD661 /* ViewModel */,
-				4CD7417A2ABD03C9004DD661 /* Repository */,
-				4CD7417B2ABD03D3004DD661 /* Constants */,
-				4CD741782ABD03B1004DD661 /* Coordinator */,
+				4CC8A8C72ABE040000FEBC11 /* Domain */,
+				4CC8A8C82ABE040700FEBC11 /* Data */,
+				4CC8A8C92ABE040B00FEBC11 /* Presentation */,
+				4CC8A8DD2ABE091E00FEBC11 /* Other */,
 			);
 			path = PostsModule;
 			sourceTree = "<group>";
@@ -297,12 +511,10 @@
 		4CD741072ABB425E004DD661 /* AuthenticationModule */ = {
 			isa = PBXGroup;
 			children = (
-				4CD741722ABCFCB8004DD661 /* View */,
-				4CD741702ABCFCA4004DD661 /* ViewModel */,
-				4CD741682ABCF78C004DD661 /* Repository */,
-				4CD741732ABCFD79004DD661 /* Coordinator */,
-				4CD741712ABCFCAC004DD661 /* Constants */,
-				4CD7416B2ABCFB3E004DD661 /* CachedModel */,
+				4CC8A8A92ABDF27B00FEBC11 /* Domain */,
+				4CC8A8A82ABDF27600FEBC11 /* Data */,
+				4CC8A8AA2ABDF28300FEBC11 /* Presentation */,
+				4CC8A8DE2ABE092D00FEBC11 /* Other */,
 			);
 			path = AuthenticationModule;
 			sourceTree = "<group>";
@@ -310,7 +522,6 @@
 		4CD7410F2ABB4FFE004DD661 /* Extension */ = {
 			isa = PBXGroup;
 			children = (
-				4CD7415C2ABC7284004DD661 /* Model.swift */,
 				4CD7414F2ABB76D2004DD661 /* PostCustomView.swift */,
 				4CD741512ABB9199004DD661 /* SearchBarView.swift */,
 				4CD7416E2ABCFB64004DD661 /* CoreDataCachable.swift */,
@@ -324,7 +535,6 @@
 		4CD741682ABCF78C004DD661 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				4CD741692ABCF798004DD661 /* AuthRepositoryProtocol.swift */,
 				4CD741642ABCF07B004DD661 /* AuthRepository.swift */,
 			);
 			path = Repository;
@@ -399,7 +609,6 @@
 		4CD7417A2ABD03C9004DD661 /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				4CD7417C2ABD03F4004DD661 /* PostsListRepoProtocol.swift */,
 				4CD7417E2ABD03FD004DD661 /* PostsListRepository.swift */,
 			);
 			path = Repository;
@@ -544,28 +753,39 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD740C02ABB355F004DD661 /* Persistence.swift in Sources */,
+				4CC8A8DC2ABE050800FEBC11 /* PostsViewRemote.swift in Sources */,
 				4CD741022ABB4161004DD661 /* BaseRouterProtocol.swift in Sources */,
+				4CC8A8BA2ABDF77A00FEBC11 /* AuthDataModel.swift in Sources */,
 				4CD741832ABD0410004DD661 /* PostsListCoordinator.swift in Sources */,
 				4CD7417D2ABD03F4004DD661 /* PostsListRepoProtocol.swift in Sources */,
 				4CD740B92ABB355C004DD661 /* PostsListView.swift in Sources */,
+				4CC8A8B72ABDF51000FEBC11 /* AuthViewRemote.swift in Sources */,
 				4CD740F32ABB35E4004DD661 /* BaseRouter.swift in Sources */,
+				4CC8A8CE2ABE048800FEBC11 /* PostsViewUseCase.swift in Sources */,
 				4CD740F62ABB35E4004DD661 /* NetworkingManger.swift in Sources */,
 				4CD741752ABCFD7F004DD661 /* AuthViewCoordinator.swift in Sources */,
 				4CD741652ABCF07B004DD661 /* AuthRepository.swift in Sources */,
 				4CD741562ABB97ED004DD661 /* AuthViewLibrary.swift in Sources */,
+				4CC8A8B52ABDF4B100FEBC11 /* AuthViewRemoteInterface.swift in Sources */,
 				4CD741502ABB76D2004DD661 /* PostCustomView.swift in Sources */,
+				4CC8A8AE2ABDF2F300FEBC11 /* AuthUseCaseInterface.swift in Sources */,
+				4CC8A8D22ABE04A600FEBC11 /* PostsViewSearchUseCaseProtocol.swift in Sources */,
 				4CD740C32ABB355F004DD661 /* Tingle.xcdatamodeld in Sources */,
 				4CD740F22ABB35E4004DD661 /* RequestBuilder.swift in Sources */,
 				4CD740F82ABB35E4004DD661 /* APIError.swift in Sources */,
 				4CD7416A2ABCF798004DD661 /* AuthRepositoryProtocol.swift in Sources */,
 				4CD7415D2ABC7284004DD661 /* Model.swift in Sources */,
-				4CD740FF2ABB3C5B004DD661 /* AuthModel.swift in Sources */,
+				4CD740FF2ABB3C5B004DD661 /* AuthEntity.swift in Sources */,
 				4CD7416F2ABCFB64004DD661 /* CoreDataCachable.swift in Sources */,
+				4CC8A8B02ABDF2F600FEBC11 /* AuthUseCase.swift in Sources */,
 				4CD741522ABB9199004DD661 /* SearchBarView.swift in Sources */,
 				4CD740B72ABB355C004DD661 /* TingleApp.swift in Sources */,
 				4CD740F72ABB35E4004DD661 /* ErrorCode.swift in Sources */,
+				4CC8A8DA2ABE04FE00FEBC11 /* PostsViewRemoteProtocol.swift in Sources */,
+				4CC8A8D42ABE04B200FEBC11 /* PostsViewSearchUseCase.swift in Sources */,
 				4CD7410C2ABB44DD004DD661 /* AuthenticationViewModel .swift in Sources */,
 				4CD741632ABC9D47004DD661 /* PostsViewLibrary.swift in Sources */,
+				4CC8A8D02ABE049300FEBC11 /* PostsViewUseCaseProtocol.swift in Sources */,
 				4CD741542ABB9441004DD661 /* AuthViewConstants.swift in Sources */,
 				4CD740FD2ABB3C59004DD661 /* PostsModel.swift in Sources */,
 				4CD741612ABC984E004DD661 /* StringWrapper.swift in Sources */,
@@ -587,6 +807,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				4CD740CD2ABB355F004DD661 /* TingleTests.swift in Sources */,
+				4CC8A8C42ABDFDD600FEBC11 /* AuthViewStubGenerator.swift in Sources */,
+				4CC8A8C62ABDFEE900FEBC11 /* Mocks.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -743,8 +965,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -753,9 +975,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Extensions.Tingle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -773,8 +998,8 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -783,9 +1008,12 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = Extensions.Tingle;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

@@ -21,8 +21,10 @@ struct TingleApp: App {
 extension TingleApp {
     func configureView() -> some View {
         let coordinator = AuthViewCoordinator()
-        let repo = AuthRepository(context: PersistenceController.shared.container.viewContext)
-        let viewModel = AuthenticationViewModel(repository: repo, coordinator: coordinator)
+        let remote = AuthViewRemote()
+        let repo = AuthRepository(remote: remote, context: PersistenceController.shared.container.viewContext)
+        let useCase = AuthUseCase(repository: repo)
+        let viewModel = AuthenticationViewModel(useCase: useCase, coordinator: coordinator)
         return AuthenticationView(viewModel: viewModel).environment(\.managedObjectContext, persistenceController.container.viewContext)
   }
 }

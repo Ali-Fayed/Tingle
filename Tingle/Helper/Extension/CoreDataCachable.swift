@@ -10,6 +10,6 @@ import CoreData
 
 protocol CoreDataCacheable {
     associatedtype CoreDataModel: NSManagedObject
-    associatedtype ResponseModel: Codable
+    associatedtype ResponseModel: Identifiable
     func mapToCoreDataModel(context: NSManagedObjectContext, authResponse: ResponseModel)
 }

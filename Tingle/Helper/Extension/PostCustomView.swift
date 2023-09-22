@@ -9,7 +9,7 @@ import Foundation
 import SwiftUI
 
 struct PostCustomView: View {
-    let postListModel: Modell
+    let postListModel: PostsDataModel
     let viewModel: PostsListViewModel
     @State private var selectedImage: StringWrapper? = nil
     var body: some View {
