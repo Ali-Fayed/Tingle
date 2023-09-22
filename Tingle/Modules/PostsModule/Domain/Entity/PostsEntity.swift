@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct PostsModel: Codable {
+struct PostsEntity: Codable {
     let posts: [Post]
     let total, skip, limit: Int
 }

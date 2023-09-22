@@ -1,16 +1,15 @@
 //
-//  PostsViewUseCaseProtocol.swift
+//  PostsViewSearchUseCaseProtocol.swift
 //  Tingle
 //
 //  Created by Ali Fayed on 22/09/2023.
 //
 
-import Foundation
 import Combine
 /// - Description: UseCase Interface
-protocol PostsViewUseCaseProtocol {
+protocol PostsViewSearchUseCaseProtocol {
     /// Return Type ->  Store The Return Value in a Well Written Convention
     typealias returnType = AnyPublisher<PostsEntity, APIError>
     /// Excute -> Excute The Use Case Responsibily
-    func excute() -> returnType
+    func excute(query: String) -> returnType 
 }

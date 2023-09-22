@@ -14,12 +14,12 @@ class PostsListRepository: PostsListRepoProtocol {
     init(remote: PostsViewRemoteProtocol) {
         self.remote = remote
     }
-    func fetchPosts() -> AnyPublisher<PostsModel, APIError> {
+    func fetchPosts() -> AnyPublisher<PostsEntity, APIError> {
         return remote.fetchPosts().map { result in
             return result
         }.eraseToAnyPublisher()
     }
-    func searchPostsSearch(seachKeyWord: String) -> AnyPublisher<PostsModel, APIError> {
+    func searchPostsSearch(seachKeyWord: String) -> AnyPublisher<PostsEntity, APIError> {
         return remote.searchPostsSearch(seachKeyWord: seachKeyWord).map { result in
             return result
         }.eraseToAnyPublisher()

@@ -10,6 +10,6 @@ import Combine
 import CoreData
 
 protocol PostsViewRemoteProtocol {
-    func fetchPosts() -> AnyPublisher<PostsModel, APIError>
-    func searchPostsSearch(seachKeyWord: String) -> AnyPublisher<PostsModel, APIError>
+    func fetchPosts() -> AnyPublisher<PostsEntity, APIError>
+    func searchPostsSearch(seachKeyWord: String) -> AnyPublisher<PostsEntity, APIError>
 }

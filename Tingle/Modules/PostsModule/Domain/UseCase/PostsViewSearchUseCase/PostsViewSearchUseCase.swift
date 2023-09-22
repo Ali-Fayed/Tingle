@@ -9,7 +9,7 @@ import Foundation
 import Combine
 class PostsViewSearchUseCase: PostsViewSearchUseCaseProtocol {
     // MARK: - Properties
-    typealias returnType = AnyPublisher<PostsModel, APIError>
+    typealias returnType = AnyPublisher<PostsEntity, APIError>
     private let repository: PostsListRepoProtocol
     // MARK: - Intializer
     init(repository: PostsListRepoProtocol) {
