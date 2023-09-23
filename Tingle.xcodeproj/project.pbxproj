@@ -450,7 +450,9 @@
 		4CC8A9342ABF23B400FEBC11 /* ProfileModule */ = {
 			isa = PBXGroup;
 			children = (
-				4CC8A93E2ABF334400FEBC11 /* New Group */,
+				4CC8A9352ABF23BA00FEBC11 /* ProfielView.swift */,
+				4CC8A9392ABF26D400FEBC11 /* InfoRow.swift */,
+				4CC8A93F2ABF334C00FEBC11 /* ProfileConstants.swift */,
 			);
 			path = ProfileModule;
 			sourceTree = "<group>";
@@ -461,16 +463,6 @@
 				4CC8A93C2ABF304600FEBC11 /* SplashView.swift */,
 			);
 			path = SplashModule;
-			sourceTree = "<group>";
-		};
-		4CC8A93E2ABF334400FEBC11 /* New Group */ = {
-			isa = PBXGroup;
-			children = (
-				4CC8A9352ABF23BA00FEBC11 /* ProfielView.swift */,
-				4CC8A9392ABF26D400FEBC11 /* InfoRow.swift */,
-				4CC8A93F2ABF334C00FEBC11 /* ProfileConstants.swift */,
-			);
-			path = "New Group";
 			sourceTree = "<group>";
 		};
 		4CD740AA2ABB355C004DD661 = {

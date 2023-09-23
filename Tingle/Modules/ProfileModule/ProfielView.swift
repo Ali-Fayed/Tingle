@@ -13,19 +13,7 @@ struct ProfileView: View {
     @Environment(\.managedObjectContext) private var context
     @FetchRequest(entity: AuthSavedModel.entity(), sortDescriptors: [], predicate: nil) var authCachedModel: FetchedResults<AuthSavedModel>
     @State private var showDefaultImage = false
-    @State private var isShowingLogin = false // State to control the login screen
-    private func clearDatabase() {
-          let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "AuthSavedModel")
-          let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
-
-          do {
-              try context.execute(batchDeleteRequest)
-              try context.save() // Save the context to persist the changes
-          } catch {
-              // Handle the error
-              print("Error clearing database: \(error.localizedDescription)")
-          }
-      }
+    @State private var isShowingLogin = false
     // MARK: - View
     var body: some View {
         NavigationView {
@@ -85,4 +73,16 @@ struct ProfileView: View {
             }
         }
     }
+    private func clearDatabase() {
+          let fetchRequest: NSFetchRequest<NSFetchRequestResult> = NSFetchRequest(entityName: "AuthSavedModel")
+          let batchDeleteRequest = NSBatchDeleteRequest(fetchRequest: fetchRequest)
+
+          do {
+              try context.execute(batchDeleteRequest)
+              try context.save() // Save the context to persist the changes
+          } catch {
+              // Handle the error
+              print("Error clearing database: \(error.localizedDescription)")
+          }
+      }
 }
