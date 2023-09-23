@@ -70,7 +70,7 @@ extension LoginView {
     }
     func renderSignInButton () -> some View {
         return Button(action: {
-            viewModel.authenticateUser(userName: LoginViewConstants.userNameStatic, password: LoginViewConstants.passwordStatic, context: context, cachedModel: Array(authCachedModel))
+            viewModel.authenticateUser(userName: viewModel.username, password: viewModel.password, context: context, cachedModel: Array(authCachedModel))
         }) {
             Text(LoginViewConstants.signInText)
                 .font(.headline)

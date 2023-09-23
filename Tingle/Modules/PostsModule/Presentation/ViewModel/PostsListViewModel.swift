@@ -42,7 +42,7 @@ class PostsListViewModel: ObservableObject {
         } receiveValue: { [weak self] posts in
             guard let self = self else {return}
             DispatchQueue.main.async {
-                self.posts = posts
+                self.posts.append(contentsOf: posts)
             }
         }.store(in: &subscriptionsBag)
     }

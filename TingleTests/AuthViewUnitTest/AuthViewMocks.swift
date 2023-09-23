@@ -11,7 +11,7 @@ import CoreData
 @testable import Tingle
 class AuthViewMocks: LoginRepoInterface {
     func cacheAuthenticatedUserData(authResponse: LoginDataModel, context: NSManagedObjectContext, cachedModels: [AuthSavedModel]) {
-        //
+        // no need for it
     }
     
     func authenticateUser(userName: String, password: String) -> AnyPublisher<LoginDataModel, APIError> {

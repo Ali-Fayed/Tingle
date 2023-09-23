@@ -10,7 +10,12 @@ import SwiftUI
 extension PostsListView {
     func postsView() -> some View {
         return ForEach(viewModel.posts) { post in
-            PostCustomView(postListModel: post, viewModel: viewModel)
+            PostCustomView(postListModel: post, viewModel: viewModel).onAppear{
+                if post.id == viewModel.posts.last?.id {
+                    // infite scrolling
+                    viewModel.fetchPosts()
+                }
+            }
         }
     }
     func imageDetailsView(imageName: String) -> some View {
