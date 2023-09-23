@@ -9,11 +9,12 @@ import Foundation
 import Combine
 import CoreData
 
-class AuthenticationViewModel: ObservableObject {
+class LoginViewModel: ObservableObject {
     // MARK: - Propeties
-    var coordinator: AuthViewCoordinator
+    var coordinator: LoginViewCoordinator
     private var subscriptionsBag = Set< AnyCancellable>()
-    private let useCase: AuthUseCaseInterface
+    private let loginUseCase: LoginUseCaseInterface
+    private let cacheUserUseCase: CachedUserUseCaseInterface
     // MARK: - States
     @Published var isPasswordVisible = false
     @Published var isLoading = false
@@ -21,14 +22,16 @@ class AuthenticationViewModel: ObservableObject {
     @Published var username = ""
     @Published var password = ""
     // MARK: - Initalizer
-    init(useCase: AuthUseCaseInterface, coordinator: AuthViewCoordinator) {
+    init(loginUseCase: LoginUseCaseInterface, cacheUserUseCase: CachedUserUseCaseInterface, coordinator: LoginViewCoordinator) {
         self.coordinator = coordinator
-        self.useCase = useCase
+        self.loginUseCase = loginUseCase
+        self.cacheUserUseCase = cacheUserUseCase
     }
     // MARK: - Methods
     func authenticateUser(userName: String, password: String, context: NSManagedObjectContext, cachedModel: [AuthSavedModel]) {
         self.isLoading = true
-        useCase.excute(userName: userName, password: password).sink { completion in
+        loginUseCase.excute(userName: userName, password: password).sink { [weak self] completion in
+            guard let self = self else {return}
             switch completion {
             case .finished:
                 self.coordinator.presentPostsListView()
@@ -36,7 +39,7 @@ class AuthenticationViewModel: ObservableObject {
             case .failure(_):
                 self.isLoading = false
                 self.coordinator.presentAlertView()
-                self.alertMessage = AuthViewConstants.errorMessage
+                self.alertMessage = LoginViewConstants.errorMessage
             }
         } receiveValue: { authModel in
             DispatchQueue.main.async {
@@ -44,7 +47,7 @@ class AuthenticationViewModel: ObservableObject {
             }
         }.store(in: &subscriptionsBag)
     }
-    private func cacheAuthenticatedUserData(authResponse: AuthDataModel, context: NSManagedObjectContext, cachedModels: [AuthSavedModel]) {
-        AuthUserCachedModel().cacheAuthenticatedUserData(authResponse: authResponse, context: context, cachedModels: cachedModels)
+    private func cacheAuthenticatedUserData(authResponse: LoginDataModel, context: NSManagedObjectContext, cachedModels: [AuthSavedModel]) {
+        cacheUserUseCase.excute(authResponse: authResponse, context: context, cachedModels: cachedModels)
     }
 }

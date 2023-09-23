@@ -8,7 +8,7 @@ import Combine
 import XCTest
 @testable import Tingle
 class AuthViewStubGenerator {
-    func stubAuth() -> AnyPublisher<AuthEntity, APIError> {
+    func stubAuth() -> AnyPublisher<LoginEntity, APIError> {
         guard let path = Bundle.authUnitTest.path(forResource: "authResponse", ofType: "json"),
             let data = try? Data(contentsOf: URL(fileURLWithPath: path)) else {
             // Return a publisher that fails with an APIError if the data loading fails
@@ -17,7 +17,7 @@ class AuthViewStubGenerator {
         do {
             let decoder = JSONDecoder()
             decoder.dateDecodingStrategy = .iso8601
-            let model = try decoder.decode(AuthEntity.self, from: data)
+            let model = try decoder.decode(LoginEntity.self, from: data)
             // Return a publisher that emits the decoded model as a value
             return Just(model).setFailureType(to: APIError.self).eraseToAnyPublisher()
         } catch {
@@ -29,6 +29,6 @@ class AuthViewStubGenerator {
 }
 extension Bundle {
     public class var authUnitTest: Bundle {
-        return Bundle(for: AuthUseCase.self)
+        return Bundle(for: LoginUseCase.self)
     }
 }

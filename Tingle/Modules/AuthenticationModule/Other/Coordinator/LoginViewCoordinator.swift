@@ -1,5 +1,5 @@
 //
-//  AuthViewCoordinator.swift
+//  LoginViewCoordinator.swift
 //  Tingle
 //
 //  Created by Ali Fayed on 22/09/2023.
@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-class AuthViewCoordinator: ObservableObject {
+class LoginViewCoordinator: ObservableObject {
     @Published var isPresentingPostsList = false
     @Published var isPresentingAlert = false
     

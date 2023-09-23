@@ -1,5 +1,5 @@
 //
-//  AuthViewConstants.swift
+//  LoginViewConstants.swift
 //  Tingle
 //
 //  Created by Ali Fayed on 20/09/2023.
@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct AuthViewConstants {
+struct LoginViewConstants {
     static let topViewImage = "TopImage"
     static let welcomeText = "Welcome"
     static let signInText = "Sign In"
@@ -22,4 +22,6 @@ struct AuthViewConstants {
     static let loadingTitle = "Loading..."
     static let userNameStatic = "kminchelle"
     static let passwordStatic = "0lelplR"
+    static let userNameTitle = "User Name"
+    static let passwordTitle = "Password"
 }

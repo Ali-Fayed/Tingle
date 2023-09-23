@@ -1,5 +1,5 @@
 //
-//  AuthUserCachedModel.swift
+//  LoginViewLocal.swift
 //  Tingle
 //
 //  Created by Ali Fayed on 22/09/2023.
@@ -7,9 +7,9 @@
 
 import CoreData
 
-class AuthUserCachedModel: CoreDataCacheable {
+class LoginViewLocal: LoginViewLocalInterface {
     typealias CoreDataModel = AuthSavedModel
-    func mapToCoreDataModel(context: NSManagedObjectContext, authResponse: AuthDataModel) {
+    func mapToCoreDataModel(context: NSManagedObjectContext, authResponse: LoginDataModel) {
         let newItem = AuthSavedModel(context: context)
         newItem.token = authResponse.token
         newItem.firstName = authResponse.firstName
@@ -20,7 +20,7 @@ class AuthUserCachedModel: CoreDataCacheable {
         newItem.userName = authResponse.username
     }
     
-    func cacheAuthenticatedUserData(authResponse: AuthDataModel, context: NSManagedObjectContext, cachedModels: [AuthSavedModel]) {
+    func cacheAuthenticatedUserData(authResponse: LoginDataModel, context: NSManagedObjectContext, cachedModels: [AuthSavedModel]) {
         let duplicate = cachedModels.first { $0.userName == authResponse.username }
         if duplicate == nil {
             mapToCoreDataModel(context: context, authResponse: authResponse)

@@ -18,7 +18,7 @@ struct PostsListView: View {
             }.listStyle(.plain).onAppear {
                 viewModel.fetchPosts()
             } .alert(isPresented: $viewModel.coordinator.isPresentingAlert) {
-                Alert(title: Text(AuthViewConstants.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text(AuthViewConstants.oKTitle)))
+                Alert(title: Text(LoginViewConstants.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text(LoginViewConstants.oKTitle)))
             }.onChange(of: viewModel.searchText) { newValue in
                 viewModel.searchPostsSearch(seachKeyWord: newValue)
             }.onChange(of: viewModel.selectedImage) { newValue in

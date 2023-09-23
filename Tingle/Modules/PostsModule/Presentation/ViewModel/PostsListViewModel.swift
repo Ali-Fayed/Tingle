@@ -33,7 +33,7 @@ class PostsListViewModel: ObservableObject {
             switch completion {
             case .failure(_):
                 self.coordinator.presentAlert()
-                self.alertMessage = AuthViewConstants.errorMessage
+                self.alertMessage = LoginViewConstants.errorMessage
             case .finished:
                 self.isLoading = false
             }
@@ -49,7 +49,7 @@ class PostsListViewModel: ObservableObject {
             switch completion {
             case .failure(_):
                 self.coordinator.presentAlert()
-                self.alertMessage = AuthViewConstants.errorMessage
+                self.alertMessage = LoginViewConstants.errorMessage
             case .finished:
                 self.isLoading = true
             }

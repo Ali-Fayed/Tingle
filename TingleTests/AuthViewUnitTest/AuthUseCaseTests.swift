@@ -11,13 +11,13 @@ import Combine
 class AuthViewUseCaseTests: XCTestCase {
     private var subscriptionsBag = Set< AnyCancellable>()
     /// Sut = System Under Test
-    var sut: AuthUseCase!
+    var sut: LoginUseCase!
     /// Mock = Fake injection
     var mocks: AuthViewMocks!
     override func setUp() {
         super.setUp()
         mocks = AuthViewMocks()
-        sut = AuthUseCase(repository: mocks)
+        sut = LoginUseCase(repo: mocks)
     }
     override func tearDown() {
         mocks = nil
