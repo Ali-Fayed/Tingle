@@ -1,4 +1,5 @@
-![Git-2](https://github.com/Ali-Fayed/orghosting/assets/72504852/5b99e66b-0b74-42a8-97be-58a8a976c53f)
+![Header](https://github.com/Ali-Fayed/Tingle/assets/72504852/12733ded-06b4-47e8-8969-757781cdfcf2)
+
 
 
 ### This is Tingle - iOS Native App Written in [Swift][Swift] 👋
@@ -14,7 +15,8 @@
   
 ## App Screenshots Preview: 
 
-![Untitled design-2](https://github.com/Ali-Fayed/orghosting/assets/72504852/0e54a485-efab-4740-bdce-a5e97a6bed74)
+![Screens](https://github.com/Ali-Fayed/Tingle/assets/72504852/1c12e992-2ca3-47d5-bea0-b7673877033c)
+
 
  ## App Technologies:
 
@@ -29,7 +31,9 @@
 
 ## Video Preview: 
 
-https://github.com/Ali-Fayed/orghosting/assets/72504852/679f704b-9671-4920-9bf3-0e8cea7ae6dd
+
+https://github.com/Ali-Fayed/Tingle/assets/72504852/491b7dbb-6f40-451d-a401-6ddbf222cc03
+
 
 ## App Layers: 
 
