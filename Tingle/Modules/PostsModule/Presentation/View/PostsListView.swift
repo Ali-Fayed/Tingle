@@ -14,22 +14,28 @@ struct PostsListView: View {
         Divider()
         ZStack {
             List {
+                // Main Posts List
                 postsView()
             }.listStyle(.plain).onAppear {
+                // Fetch Posts
                 viewModel.fetchPosts()
             } .alert(isPresented: $viewModel.coordinator.isPresentingAlert) {
+                // API Error Alert
                 Alert(title: Text(LoginViewConstants.alertTitle), message: Text(viewModel.alertMessage), dismissButton: .default(Text(LoginViewConstants.oKTitle)))
             }.onChange(of: viewModel.searchText) { newValue in
+                // Search Action When Search Text Changes
                 viewModel.searchPostsSearch(seachKeyWord: newValue)
             }.onChange(of: viewModel.selectedImage) { newValue in
+                // Present Details View
                 withAnimation {
                     viewModel.isDetailedPhotoViewAppeared = true
                 }
+                // Blurry Background When Zoom On Photo
             }.blur(radius: viewModel.isDetailedPhotoViewAppeared ? 5.0 : 0.0).onTapGesture {
                 withAnimation {
                     viewModel.isDetailedPhotoViewAppeared = false
                 }
-            }.ignoresSafeArea()
+            }.blur(radius: viewModel.isLoading ? 5.0 : 0.0).ignoresSafeArea()
             //
             if viewModel.isDetailedPhotoViewAppeared {
                 if let imageName = viewModel.selectedImage?.name {
@@ -39,15 +45,9 @@ struct PostsListView: View {
         }
     }
 }
-
+// MARK: - Preview
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        let remote = PostsViewRemote()
-        let repo = PostsListRepository(remote: remote)
-        let useCase = PostsViewUseCase(repository: repo)
-        let searchUseCase = PostsViewSearchUseCase(repository: repo)
-        let coordinator = PostsListCoordinator()
-        let viewModel = PostsListViewModel(postsUseCase: useCase, searchPostsUseCase: searchUseCase, coordinator: coordinator)
-        PostsListView(viewModel: viewModel)
+        PostsListFactory.createPostsListFactory()
     }
 }

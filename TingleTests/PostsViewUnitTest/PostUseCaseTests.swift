@@ -38,7 +38,7 @@ class PostUseCaseTests: XCTestCase {
                 break
             }
         } receiveValue: { post in
-            XCTAssertNotNil(post.posts)
+            XCTAssertNotNil(post)
             promise.fulfill()
         }.store(in: &subscriptionsBag)
     }

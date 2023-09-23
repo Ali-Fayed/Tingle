@@ -9,11 +9,11 @@ import Foundation
 import Combine
 class PostsListViewModel: ObservableObject {
     // MARK: - Propeties
-    private var postsUseCase: PostsViewUseCaseProtocol
-    private var searchPostsUseCase: PostsViewSearchUseCaseProtocol
+    private var postsUseCase: PostsViewUseCaseInterface
+    private var searchPostsUseCase: PostsViewSearchUseCaseInterface
+    private var subscriptionsBag = Set< AnyCancellable > ()
+    @Published var posts: [PostsDataModel] = []
     var coordinator: PostsListCoordinator
-    private var subscriptions = Set< AnyCancellable > ()
-    @Published var posts: [Post] = []
     // MARK: - States
     @Published var searchText = ""
     @Published var alertMessage = ""
@@ -22,14 +22,16 @@ class PostsListViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var isDetailedPhotoViewAppeared = false
     // MARK: - Initalizer
-    init(postsUseCase: PostsViewUseCaseProtocol, searchPostsUseCase : PostsViewSearchUseCaseProtocol ,coordinator: PostsListCoordinator) {
+    init(postsUseCase: PostsViewUseCaseInterface, searchPostsUseCase : PostsViewSearchUseCaseInterface ,coordinator: PostsListCoordinator) {
         self.postsUseCase = postsUseCase
         self.searchPostsUseCase = searchPostsUseCase
         self.coordinator = coordinator
     }
+    // MARK: - Fetch Methods
     func fetchPosts() {
         self.isLoading = true
-        postsUseCase.excute().sink { completion in
+        postsUseCase.excute().sink { [weak self] completion in
+            guard let self = self else {return}
             switch completion {
             case .failure(_):
                 self.coordinator.presentAlert()
@@ -37,26 +39,31 @@ class PostsListViewModel: ObservableObject {
             case .finished:
                 self.isLoading = false
             }
-        } receiveValue: { posts in
+        } receiveValue: { [weak self] posts in
+            guard let self = self else {return}
             DispatchQueue.main.async {
-                self.posts = posts.posts
+                self.posts = posts
             }
-        }.store(in: &subscriptions)
+        }.store(in: &subscriptionsBag)
     }
     
     func searchPostsSearch(seachKeyWord: String) {
-        searchPostsUseCase.excute(query: seachKeyWord).sink { completion in
+        self.isLoading = true
+        searchPostsUseCase.excute(query: seachKeyWord).sink { [weak self] completion in
+            guard let self = self else {return}
             switch completion {
             case .failure(_):
+                self.isLoading = false
                 self.coordinator.presentAlert()
                 self.alertMessage = LoginViewConstants.errorMessage
             case .finished:
-                self.isLoading = true
+                self.isLoading = false
             }
-        } receiveValue: { posts in
+        } receiveValue: { [weak self] posts in
+            guard let self = self else {return}
             DispatchQueue.main.async {
-                self.posts = posts.posts
+                self.posts = posts
             }
-        }.store(in: &subscriptions)
+        }.store(in: &subscriptionsBag)
     }
 }

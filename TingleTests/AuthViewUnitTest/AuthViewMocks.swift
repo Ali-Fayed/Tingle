@@ -7,8 +7,13 @@
 
 import XCTest
 import Combine
+import CoreData
 @testable import Tingle
 class AuthViewMocks: LoginRepoInterface {
+    func cacheAuthenticatedUserData(authResponse: LoginDataModel, context: NSManagedObjectContext, cachedModels: [AuthSavedModel]) {
+        //
+    }
+    
     func authenticateUser(userName: String, password: String) -> AnyPublisher<LoginDataModel, APIError> {
         return AuthViewStubGenerator().stubAuth()
             .map { result in

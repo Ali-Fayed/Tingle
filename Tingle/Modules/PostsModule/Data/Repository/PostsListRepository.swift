@@ -7,21 +7,44 @@
 import Combine
 import CoreData
 
-class PostsListRepository: PostsListRepoProtocol {
+class PostsListRepository: PostsListRepoInterface {
     private var networkManger = NetworkingManger.shared
-    private let remote: PostsViewRemoteProtocol
+    private let remote: PostsViewRemoteInterface
     // MARK: - Initializer
-    init(remote: PostsViewRemoteProtocol) {
+    init(remote: PostsViewRemoteInterface) {
         self.remote = remote
     }
-    func fetchPosts() -> AnyPublisher<PostsEntity, APIError> {
+    func fetchPosts() -> AnyPublisher<[PostsDataModel], APIError> {
         return remote.fetchPosts().map { result in
-            return result
+            let postsDataModels = result.posts.map { post in
+                return PostsDataModel(
+                    userName: PostsListConstants.userImage,
+                    closeMarkImage: PostsListConstants.closeMarkImage,
+                    moreImage: PostsListConstants.moreImage,
+                    userImage: PostsListConstants.userImage,
+                    postDate: PostsListConstants.postDate,
+                    postImages: PostsListConstants.postImages,
+                    postBody: post.body
+                )
+            }
+            return postsDataModels
         }.eraseToAnyPublisher()
     }
-    func searchPostsSearch(seachKeyWord: String) -> AnyPublisher<PostsEntity, APIError> {
+
+    func searchPostsSearch(seachKeyWord: String) -> AnyPublisher<[PostsDataModel], APIError> {
         return remote.searchPostsSearch(seachKeyWord: seachKeyWord).map { result in
-            return result
+            let postsDataModels = result.posts.map { post in
+                return PostsDataModel(
+                    userName: PostsListConstants.userImage,
+                    closeMarkImage: PostsListConstants.closeMarkImage,
+                    moreImage: PostsListConstants.moreImage,
+                    userImage: PostsListConstants.userImage,
+                    postDate: PostsListConstants.postDate,
+                    postImages: PostsListConstants.postImages,
+                    postBody: post.body
+                )
+            }
+            return postsDataModels
         }.eraseToAnyPublisher()
     }
 }

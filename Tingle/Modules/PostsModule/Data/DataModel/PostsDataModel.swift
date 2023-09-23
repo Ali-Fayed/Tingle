@@ -15,6 +15,5 @@ struct PostsDataModel: Identifiable {
     let postDate: String
     let postImages: [String]
     let postBody: String
-    let isAlertVisible: Bool
     var selectedImage: StringWrapper? = nil
 }

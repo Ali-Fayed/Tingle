@@ -29,9 +29,9 @@ struct PostCustomView: View {
                 }
                 Spacer()
                 Menu(content: {
-                    Button("Action 1", action: {})
-                    Button("Action 2", action: {})
-                    Button("Action 3", action: {})
+                    Button(PostsListConstants.actionName, action: {})
+                    Button(PostsListConstants.actionName, action: {})
+                    Button(PostsListConstants.actionName, action: {})
                 }) {
                     Image(postListModel.moreImage)
                         .resizable()

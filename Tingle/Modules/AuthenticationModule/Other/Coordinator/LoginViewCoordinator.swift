@@ -15,13 +15,7 @@ class LoginViewCoordinator: ObservableObject {
         isPresentingPostsList = true
     }
     func postsListView() -> some View {
-        let remote = PostsViewRemote()
-        let repo = PostsListRepository(remote: remote)
-        let searchUseCase = PostsViewSearchUseCase(repository: repo)
-        let useCase = PostsViewUseCase(repository: repo)
-        let coordinator = PostsListCoordinator()
-        let viewModel = PostsListViewModel(postsUseCase: useCase, searchPostsUseCase: searchUseCase, coordinator: coordinator)
-        return PostsListView(viewModel: viewModel)
+        PostsListFactory.createPostsListFactory()
     }
     func presentAlertView() {
         isPresentingAlert = true

@@ -14,10 +14,10 @@ struct SearchBarView: View {
         VStack(alignment: .leading) {
         HStack {
             if isSearching {
-                Image(systemName: "magnifyingglass")
+                Image(systemName: PostsListConstants.searchImage)
                     .foregroundColor(.primary)
                     .padding(.leading, 10)
-                TextField("Search", text: $searchText)
+                TextField(PostsListConstants.searchTitle, text: $searchText)
                     .transition(.slide)
                     .animation(.easeInOut)
             } else {
@@ -33,7 +33,7 @@ struct SearchBarView: View {
                         }
                     }
                 }) {
-                    Image(systemName: isSearching ? "xmark.circle.fill" : "magnifyingglass")
+                    Image(systemName: isSearching ? PostsListConstants.closeMarkImage : PostsListConstants.searchImage)
                         .foregroundColor(.primary)
                 }.padding(.trailing)
             }

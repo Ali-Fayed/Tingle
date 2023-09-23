@@ -10,7 +10,7 @@ import SwiftUI
 extension PostsListView {
     func postsView() -> some View {
         return ForEach(viewModel.posts) { post in
-            PostCustomView(postListModel: PostsDataModel(userName: PostsListConstants.staticPostUserName, closeMarkImage: PostsListConstants.closeMarkImage, moreImage: PostsListConstants.moreImage, userImage: PostsListConstants.userImage, postDate: PostsListConstants.postDate, postImages: PostsListConstants.postImages, postBody: post.body, isAlertVisible: viewModel.coordinator.isPresentingAlert), viewModel: viewModel)
+            PostCustomView(postListModel: post, viewModel: viewModel)
         }
     }
     func imageDetailsView(imageName: String) -> some View {

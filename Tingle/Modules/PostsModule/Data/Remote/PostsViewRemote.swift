@@ -6,7 +6,7 @@
 //
 
 import Combine
-class PostsViewRemote: PostsViewRemoteProtocol {
+class PostsViewRemote: PostsViewRemoteInterface {
     private var networkManger = NetworkingManger.shared
     func fetchPosts() -> AnyPublisher<PostsEntity, APIError> {
         let model = PostsEntity.self

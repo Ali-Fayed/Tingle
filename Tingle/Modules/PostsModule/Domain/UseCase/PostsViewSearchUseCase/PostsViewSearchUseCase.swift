@@ -7,12 +7,12 @@
 
 import Foundation
 import Combine
-class PostsViewSearchUseCase: PostsViewSearchUseCaseProtocol {
+class PostsViewSearchUseCase: PostsViewSearchUseCaseInterface {
     // MARK: - Properties
-    typealias returnType = AnyPublisher<PostsEntity, APIError>
-    private let repository: PostsListRepoProtocol
+    typealias returnType = AnyPublisher<[PostsDataModel], APIError>
+    private let repository: PostsListRepoInterface
     // MARK: - Intializer
-    init(repository: PostsListRepoProtocol) {
+    init(repository: PostsListRepoInterface) {
         self.repository = repository
     }
     // MARK: - Use Case Excution Method

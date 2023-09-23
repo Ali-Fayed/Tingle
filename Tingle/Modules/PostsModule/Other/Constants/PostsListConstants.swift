@@ -16,4 +16,6 @@ struct PostsListConstants {
     static let moreImage = "dots"
     static let logoTitle = "LOGO"
     static let searchImage = "magnifyingglass"
+    static let actionName = "Action"
+    static let searchTitle = "Search"
 }

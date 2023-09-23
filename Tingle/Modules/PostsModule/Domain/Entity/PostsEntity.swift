@@ -1,5 +1,5 @@
 //
-//  PostsModel.swift
+//  PostsEntity.swift
 //  Tingle
 //
 //  Created by Ali Fayed on 20/09/2023.

@@ -41,7 +41,8 @@ class LoginViewModel: ObservableObject {
                 self.coordinator.presentAlertView()
                 self.alertMessage = LoginViewConstants.errorMessage
             }
-        } receiveValue: { authModel in
+        } receiveValue: { [weak self] authModel in
+            guard let self = self else {return}
             DispatchQueue.main.async {
                 self.cacheAuthenticatedUserData(authResponse: authModel, context: context, cachedModels: cachedModel)
             }
