@@ -15,7 +15,7 @@ class LoginViewCoordinator: ObservableObject {
         isPresentingPostsList = true
     }
     func postsListView() -> some View {
-        PostsListFactory.createPostsListFactory()
+        TabBarView()
     }
     func presentAlertView() {
         isPresentingAlert = true

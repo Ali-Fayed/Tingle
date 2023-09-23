@@ -18,7 +18,7 @@ class PostsListRepository: PostsListRepoInterface {
         return remote.fetchPosts().map { result in
             let postsDataModels = result.posts.map { post in
                 return PostsDataModel(
-                    userName: PostsListConstants.userImage,
+                    userName: PostsListConstants.staticPostUserName,
                     closeMarkImage: PostsListConstants.closeMarkImage,
                     moreImage: PostsListConstants.moreImage,
                     userImage: PostsListConstants.userImage,

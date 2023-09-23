@@ -36,7 +36,7 @@ extension LoginView {
             Text(LoginViewConstants.userNameTitle)
                 .font(Font.system(size: 15, weight: .medium))
             TextField(LoginViewConstants.userNameTFplacholder, text: $viewModel.username)
-                .frame(height: 20)
+                .frame(width: UIScreen.main.bounds.size.width - 60, height: 20)
                 .padding()
                 .background(Color(.white))
                 .overlay(
@@ -51,10 +51,8 @@ extension LoginView {
             HStack {
                 if viewModel.isPasswordVisible {
                     TextField(LoginViewConstants.passwordTFplacholder, text: $viewModel.password)
-                        .frame(height: 20)
                 } else {
                     SecureField(LoginViewConstants.passwordTFplacholder, text: $viewModel.password)
-                        .frame(height: 20)
                 }
                 Button(action: {
                     viewModel.isPasswordVisible.toggle()
@@ -63,7 +61,7 @@ extension LoginView {
                         .padding(.trailing, 10)
                         .foregroundColor(.gray)
                 }
-            }.padding()
+            }.frame(width: UIScreen.main.bounds.size.width - 60, height: 20).padding()
                 .background(Color(.white))
                 .overlay(
                     RoundedRectangle(cornerRadius: 10).stroke(Color.gray, lineWidth: 0.5)
@@ -81,7 +79,7 @@ extension LoginView {
                 .frame(maxWidth: .infinity)
                 .background(Color(hex: LoginViewConstants.viewColor))
                 .cornerRadius(30)
-        }.padding(.top, 20)
+        }.frame(width: UIScreen.main.bounds.size.width - 40, height: 20).padding(.top, 20)
     }
     func loadingIndicator() -> some View {
         return Group {

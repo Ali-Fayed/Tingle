@@ -28,6 +28,11 @@
 		4CC8A92A2ABF083E00FEBC11 /* CachedUserUseCaseInterface.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A9292ABF083E00FEBC11 /* CachedUserUseCaseInterface.swift */; };
 		4CC8A92C2ABF089D00FEBC11 /* CachedUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A92B2ABF089D00FEBC11 /* CachedUserUseCase.swift */; };
 		4CC8A92F2ABF13A700FEBC11 /* PostsListFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A92E2ABF13A700FEBC11 /* PostsListFactory.swift */; };
+		4CC8A9332ABF1EFF00FEBC11 /* TabBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A9322ABF1EFF00FEBC11 /* TabBarView.swift */; };
+		4CC8A9362ABF23BA00FEBC11 /* ProfielView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A9352ABF23BA00FEBC11 /* ProfielView.swift */; };
+		4CC8A93A2ABF26D400FEBC11 /* InfoRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A9392ABF26D400FEBC11 /* InfoRow.swift */; };
+		4CC8A93D2ABF304600FEBC11 /* SplashView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A93C2ABF304600FEBC11 /* SplashView.swift */; };
+		4CC8A9402ABF334C00FEBC11 /* ProfileConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC8A93F2ABF334C00FEBC11 /* ProfileConstants.swift */; };
 		4CD740B72ABB355C004DD661 /* TingleApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740B62ABB355C004DD661 /* TingleApp.swift */; };
 		4CD740B92ABB355C004DD661 /* PostsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CD740B82ABB355C004DD661 /* PostsListView.swift */; };
 		4CD740BB2ABB355F004DD661 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4CD740BA2ABB355F004DD661 /* Assets.xcassets */; };
@@ -111,6 +116,11 @@
 		4CC8A9292ABF083E00FEBC11 /* CachedUserUseCaseInterface.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedUserUseCaseInterface.swift; sourceTree = "<group>"; };
 		4CC8A92B2ABF089D00FEBC11 /* CachedUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CachedUserUseCase.swift; sourceTree = "<group>"; };
 		4CC8A92E2ABF13A700FEBC11 /* PostsListFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListFactory.swift; sourceTree = "<group>"; };
+		4CC8A9322ABF1EFF00FEBC11 /* TabBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarView.swift; sourceTree = "<group>"; };
+		4CC8A9352ABF23BA00FEBC11 /* ProfielView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfielView.swift; sourceTree = "<group>"; };
+		4CC8A9392ABF26D400FEBC11 /* InfoRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoRow.swift; sourceTree = "<group>"; };
+		4CC8A93C2ABF304600FEBC11 /* SplashView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashView.swift; sourceTree = "<group>"; };
+		4CC8A93F2ABF334C00FEBC11 /* ProfileConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileConstants.swift; sourceTree = "<group>"; };
 		4CD740B32ABB355C004DD661 /* Tingle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Tingle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4CD740B62ABB355C004DD661 /* TingleApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TingleApp.swift; sourceTree = "<group>"; };
 		4CD740B82ABB355C004DD661 /* PostsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsListView.swift; sourceTree = "<group>"; };
@@ -429,6 +439,40 @@
 			path = CustomViews;
 			sourceTree = "<group>";
 		};
+		4CC8A9312ABF1EE500FEBC11 /* TabBarModule */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A9322ABF1EFF00FEBC11 /* TabBarView.swift */,
+			);
+			path = TabBarModule;
+			sourceTree = "<group>";
+		};
+		4CC8A9342ABF23B400FEBC11 /* ProfileModule */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A93E2ABF334400FEBC11 /* New Group */,
+			);
+			path = ProfileModule;
+			sourceTree = "<group>";
+		};
+		4CC8A93B2ABF303B00FEBC11 /* SplashModule */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A93C2ABF304600FEBC11 /* SplashView.swift */,
+			);
+			path = SplashModule;
+			sourceTree = "<group>";
+		};
+		4CC8A93E2ABF334400FEBC11 /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+				4CC8A9352ABF23BA00FEBC11 /* ProfielView.swift */,
+				4CC8A9392ABF26D400FEBC11 /* InfoRow.swift */,
+				4CC8A93F2ABF334C00FEBC11 /* ProfileConstants.swift */,
+			);
+			path = "New Group";
+			sourceTree = "<group>";
+		};
 		4CD740AA2ABB355C004DD661 = {
 			isa = PBXGroup;
 			children = (
@@ -557,8 +601,11 @@
 		4CD741052ABB4240004DD661 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
+				4CC8A93B2ABF303B00FEBC11 /* SplashModule */,
+				4CC8A9312ABF1EE500FEBC11 /* TabBarModule */,
 				4CD741072ABB425E004DD661 /* AuthenticationModule */,
 				4CD741062ABB4253004DD661 /* PostsModule */,
+				4CC8A9342ABF23B400FEBC11 /* ProfileModule */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -822,6 +869,7 @@
 				4CD741832ABD0410004DD661 /* PostsListCoordinator.swift in Sources */,
 				4CD7417D2ABD03F4004DD661 /* PostsListRepoInterface.swift in Sources */,
 				4CD740B92ABB355C004DD661 /* PostsListView.swift in Sources */,
+				4CC8A93D2ABF304600FEBC11 /* SplashView.swift in Sources */,
 				4CC8A8B72ABDF51000FEBC11 /* LoginViewRemote.swift in Sources */,
 				4CD740F32ABB35E4004DD661 /* BaseRouter.swift in Sources */,
 				4CC8A8CE2ABE048800FEBC11 /* PostsViewUseCase.swift in Sources */,
@@ -834,6 +882,7 @@
 				4CC8A8AE2ABDF2F300FEBC11 /* LoginUseCaseInterface.swift in Sources */,
 				4CC8A8D22ABE04A600FEBC11 /* PostsViewSearchUseCaseInterface.swift in Sources */,
 				4CD740C32ABB355F004DD661 /* Tingle.xcdatamodeld in Sources */,
+				4CC8A93A2ABF26D400FEBC11 /* InfoRow.swift in Sources */,
 				4CD740F22ABB35E4004DD661 /* RequestBuilder.swift in Sources */,
 				4CD740F82ABB35E4004DD661 /* APIError.swift in Sources */,
 				4CD7416A2ABCF798004DD661 /* LoginRepoInterface.swift in Sources */,
@@ -864,8 +913,11 @@
 				4CD740F42ABB35E4004DD661 /* NetworkReachability.swift in Sources */,
 				4CC8A92C2ABF089D00FEBC11 /* CachedUserUseCase.swift in Sources */,
 				4CD7410E2ABB4FF4004DD661 /* Color+Ext.swift in Sources */,
+				4CC8A9332ABF1EFF00FEBC11 /* TabBarView.swift in Sources */,
 				4CD740F52ABB35E4004DD661 /* RequestRouter.swift in Sources */,
 				4CC8A92A2ABF083E00FEBC11 /* CachedUserUseCaseInterface.swift in Sources */,
+				4CC8A9402ABF334C00FEBC11 /* ProfileConstants.swift in Sources */,
+				4CC8A9362ABF23BA00FEBC11 /* ProfielView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

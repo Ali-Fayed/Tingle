@@ -16,10 +16,9 @@ struct TingleApp: App {
             configureView()
         }
     }
-    
 }
 extension TingleApp {
     func configureView() -> some View {
-        LoginViewFactory.createLoginView().environment(\.managedObjectContext, persistenceController.container.viewContext)
+        SplashView().environment(\.managedObjectContext, persistenceController.container.viewContext)
   }
 }
